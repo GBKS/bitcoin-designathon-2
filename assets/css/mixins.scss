@@ -1,0 +1,133 @@
+@use "sass:list";
+@use "sass:math";
+@use "variables";
+
+@mixin placeholder-color($color) {
+    &:placeholder-shown {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin retina() {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    @content;
+  }
+}
+
+@mixin r($property, $minSize, $maxSize) {
+  $multiplier: math.div($maxSize - $minSize, 1280 - 375)*100;
+  $baseSize: $minSize - math.div(375, 100) * $multiplier + 'px';
+
+  #{$property}: calc(#{$baseSize} + 1vw * #{$multiplier});
+
+  @include media-query(large) {
+    #{$property}: $maxSize+px;
+  }
+}
+
+@mixin rs($items...) {
+  $properties: ();
+  
+  @each $item in $items {
+    $property: list.nth($item, 1);
+    $minSize: list.nth($item, 2);
+    $maxSize: list.nth($item, 3);
+    
+    $multiplier: math.div($maxSize - $minSize, 1280 - 375)*100;
+    $baseSize: $minSize - math.div(375, 100) * $multiplier + 'px';
+    
+    #{$property}: calc(#{$baseSize} + 1vw * #{$multiplier});
+    $properties: list.append($properties, ($property, $maxSize), comma);
+  }
+  
+  @include media-query(large) {
+    @each $prop in $properties {
+      #{list.nth($prop, 1)}: list.nth($prop, 2)+px;
+    }
+  }
+}
+
+// Media queries
+
+@mixin media-query($media-query) {
+  @if $media-query == small {
+    @media only screen and (max-width:(variables.$small-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == medium {
+    @media only screen and (min-width:variables.$small-width) and (max-width:(variables.$large-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == medium-up {
+    @media only screen and (min-width:variables.$small-width) {
+      @content;
+    }
+  }
+
+  @if $media-query == medium-down {
+    @media only screen and (max-width:(variables.$large-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == large {
+    @media only screen and (min-width:variables.$large-width) {
+      @content;
+    }
+  }
+
+  @if $media-query == large-only {
+    @media only screen and (min-width:variables.$large-width) and (max-width:(variables.$huge-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == medium-large {
+    @media only screen and (min-width:variables.$small-width) and (max-width:(variables.$huge-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == large-mega {
+    @media only screen and (min-width:variables.$large-width) and (max-width:(variables.$mega-width - 1)) {
+      @content;
+    }
+  }
+
+  @if $media-query == huge {
+    @media only screen and (min-width:variables.$huge-width) {
+      @content;
+    }
+  }
+
+  @if $media-query == mega {
+    @media only screen and (min-width:variables.$mega-width) {
+      @content;
+    }
+  }
+}

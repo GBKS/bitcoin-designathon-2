@@ -1,0 +1,215 @@
+{
+  "banner": {
+    "text": "We are getting creative with bitcoin.<br/>From May 4 to 18, 2025."
+  },
+  "info": {
+    "title": "Thank you for participating",
+    "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) had a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.<br/><br/>It was a blast. Thank you to all participants for your creative energy and hard work. Thank you to all who helped make this event happen, especially our amazing sponsors. Check out the participating projects below."
+  },
+  "sponsors": {
+    "title": "There will be prizes",
+    "description": "Thank you to our amazing sponsors for allowing us to give tokens of gratitudes to participants for their efforts. Details will be added here soon."
+  },
+  "questions": {
+    "title": "Questions?",
+    "questions": [
+      {
+        "i": "who",
+        "q": "Who could take part?",
+        "a": "<p>Anyone! Innovation is created by exploring creativity and this was exactly your place to do that. You could feel free to stretch your creative side or explore a design concept that you’ve had.<br/><br/>We loved to involve anyone that wanted to take part, from designers and developers, PM’s and consultants, to total noobs. Everyone was welcome!</p>"
+      },
+      {
+        "i": "when-and-where",
+        "q": "When and where did it take place?",
+        "a": "<p>The bitcoin designathon took place online between October 12 to 23 (Wed-Sun). <br/><br/>All communications, project setup, news, updates, schedules, mentorship, and everything else happened in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Bitcoin Design Discord</a>, for anyone to hop in and say hi 👋 to other makers, start forming project teams, and discuss ideas. This website was updated as the event progressed.<br/><br/>Workshops and talks were streamed on the <a href=\"https://www.youtube.com/c/BitcoinDesign\" target=\"_blank\" rel=\"me\">Bitcoin Design Youtube Channel</a>, so you could join us live or catch up in your own time!</p>"
+      },
+      {
+        "i": "activity",
+        "q": "What did you do?",
+        "a": "<p>Our first few days were dedicated to ensuring all makers were matched up with projects. You could also choose to work on your project alone, totally up to you! The remainder of the event was free and open for you to explore your design creativity.<br/><br/>Next to that, there were live workshops you could join, such as how to do remote design sprints, an intro to Figma and the Bitcoin UI Kit, research, as well as some technical topics. If you wanted to host a call or workshop, you could reach out in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon Slack channel</a>.<br/><br/>On the final day makers submitted their projects for review and had a chance to present them live to the community.</p>"
+      },
+      {
+        "i": "help-for-newcomers",
+        "q": "This was my first time joining a hackathon, was there help?",
+        "a": "<p>Our first few days of the designathon were dedicated to providing makers with some amazing workshops. We also provided guidance in terms of online tutorials and resources you could use to enjoy your design journey. We had also put together a brief <a href=\"https://docs.google.com/document/d/1ELgNQLPsxAs_zefM0CMBh_ATQho_sy35xjBDeok-Jro/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with tips for participation.<br/><br/>This provided some good tools and resources for you to start designing and most importantly having fun! Next to that, our <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">Slack channel</a> was always open for you to post your question and we gladly directed you to any additional help you may have needed.</p>"
+      },
+      {
+        "i": "find-projects",
+        "q": "Looking for a project to hack on?",
+        "a": "<p>Looking for a project to join? You could jump into our <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord</a> and introduce yourself in our #designathon channel. You could let other makers know who you are, where you were from, what skills, resources, and time you could offer, plus what you were excited to design!<br/><br/>Teams organised amongst themselves. We suggested including a variety of backgrounds and skill sets, which typically creates better results. Some participants could have been more design focused, others more technical, or artists, it totally depended on what you were working on.</p>"
+      },
+      {
+        "i": "judging",
+        "q": "How were prizes awarded?",
+        "a": "<p>Design projects were evaluated on the following criteria:</p><ul><li><p><b>🌈 Innovation</b><br/>The design should be something new and interesting. This can be a brand new concept, or a fresh take on something we already know.</p></li><li><p><b>⚡ Bitcoin Integration</b><br/>The design should make intelligent use of bitcoin (and/or surrounding technologies like lightning).</p></li><li><p><b>👀 Open design</b><br/>The design community is all about working and collaborating in public. Has the project been transparent throughout the design journey?</p></li><li><p><b>✅ Execution</b><br/>Designers should focus on attention to detail. How well has the project executed? How strong was the design process?</p></li><li><p><b>🍒 UX/UI Design</b><br/>The design is user-centered, follows good design principles and is well-crafted.</p></li><li><p><b>🔥 Je ne sais quoi</b><br/>The design should have an extra level of pizazz, personality, creativity, or coolness.</p></li>"
+      },
+      {
+        "i": "ideas",
+        "q": "Was my idea appropriate for the designathon?",
+        "a": "<p>The bitcoin designation was open to anything your mind could imagine. If you had an idea in mind and were wondering if it would be a great fit for the designathon. Below you’ll find a list of idea categories which might have helped!</p><ul><li><p>Education - how can we make bitcoin easier to understand and start using for more people around the world?</p></li><li><p>Games - what are some unique playful experiences that can only be built on bitcoin?</p></li><li><p>Future tech - how will we use bitcoin a few years from now when Taro, Fedimint, Taproot and other advancements are broadly adopted?</p></li><li><p>Adoption - how can we as a community get the current tech to more people in new, interesting, and useful ways?</p></li><li><p>Inclusion - explore how bitcoin reach more people by improving aspects like accessibility and localization</p></li><li><p>Finance - how can bitcoin be used in finance beyond payments and savings (RoboSats, LN Markets, Stable coins on Taro, etc)?</p></li><li><p>How can bitcoin wallets enable decentralised identities (see <a href=\"https://bitcoin.design/guide/how-it-works/sign-in-with-bitcoin/\" target=\"_blank\" rel=\"me\">Sign in with bitcoin</a>)</p></li><li><p>Solve design problems or think of new experiences around Lightning</p></li><li><p>Explore designs and interaction models around hardware wallets</p></li><li><p>Use cases in your personal context (for your kids, people in your community, inheritance)</p></li><li><p>Art - this one is up to you to define</p></li></ul><p>If your idea didn’t fit in these categories, no worries, you could just go for it. As long as it was related to bitcoin in some way, it was all in good order.</p>"
+      }
+    ]
+  },
+  "ideas": {
+    "title": "Ideas",
+    "description": "It all started with ideas. In the time leading up to the designathon, we invited you to submit your ideas. Some of them turned into projects for you and/or others to collaborate on during the&nbsp;event.",
+    "link-dead": "https://airtable.com/shrPq4Yjb68x9vEO2",
+    "linkLabel-dead": "Submit your idea"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "These were the projects being worked on at Designathon, you can see the final presentations in this <a href=\"https://www.youtube.com/watch?v=YIfFbHIdovw\" target=\"_blank\" rel=\"nofollow noindex\">call recording</a>. Some of them chose to continue in <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Legends of Lightning</a>.",
+    "link-dead": "https://airtable.com/shrwp1JAoY0oHiTnF",
+    "linkLabel-dead": "Start a project",
+    "general": {
+      "text": "Have not seen anything yet that interests you? You can also register first and sort out later what to work on. Also check out our <a href=\"https://docs.google.com/document/d/1ELgNQLPsxAs_zefM0CMBh_ATQho_sy35xjBDeok-Jro/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with participation&nbsp;tips.",
+      "link": "https://airtable.com/shrKk3LXmnAe1YsGV"
+    }
+  },
+  "partners": {
+    "title": "Co-mingle",
+    "description": "The designathon started at the same time as several other events. Those were great opportunities to meet others, find interesting projects, help out, etc.",
+    "partners": [
+      {
+        "image": "legends-of-lightning.jpg",
+        "retina": "legends-of-lightning@2x.jpg",
+        "name": "Bolt.fun Legends of Lightning tournament",
+        "description": "Enter your project into this 2-month online global tournament and compete for prizes of up to ~$60,000 in bitcoin. Or if you are already part of the tournament, use the designathon to get design support. October 12 to Dec&nbsp;7.",
+        "link": "https://makers.bolt.fun/tournaments/1/overview"
+      },
+      {
+        "image": "tabconf.jpg",
+        "retina": "tabconf@2x.jpg",
+        "name": "TABConf",
+        "description": "Stephen hosted a Bitcoin Design table at the TABConf Builder Day, which started the same day as the designathon. You could stop by and hack on your designathon project. October 12 to&nbsp;15.",
+        "link": "https://tabconf.com"
+      },
+      {
+        "image": "bitcoin-amsterdam.jpg",
+        "retina": "bitcoin-amsterdam@2x.jpg",
+        "name": "Bitcoin Amsterdam",
+        "description": "Several members of the Bitcoin Design Community attended this conference, which also started the same day as the designathon. You were invited to say hi and kick off the events together. October 12 to&nbsp;14.",
+        "link": "https://b.tc/conference/amsterdam"
+      }
+    ]
+  },
+  "schedule": {
+    "title": "Schedule",
+    "description": "The designathon generally had a loose schedule, with projects deciding their own pace. Important, but still optional, were the kick-off, mid-event check-in, and wrap-up calls.",
+    "dates": {
+      "2022-10-10": {
+        "label": "Monday, Oct 10 <i>/ Day -2</i>"
+      },
+      "2022-10-12": {
+        "label": "Wednesday, Oct 12 <i>/ Day 1</i>"
+      },
+      "2022-10-13": {
+        "label": "Thursday, Oct 13 <i>/ Day 2</i>"
+      },
+      "2022-10-14": {
+        "label": "Friday, Oct 14 <i>/ Day 3</i>"
+      },
+      "2022-10-15": {
+        "label": "Saturday, Oct 15 <i>/ Day 4</i>"
+      },
+      "2022-10-16": {
+        "label": "Sunday, Oct 16 <i>/ Day 5</i>"
+      },
+      "2022-10-17": {
+        "label": "Monday, Oct 17 <i>/ Day 6</i>"
+      },
+      "2022-10-18": {
+        "label": "Tuesday, Oct 18 <i>/ Day 7</i>"
+      },
+      "2022-10-19": {
+        "label": "Wednesday, Oct 19 <i>/ Day 8</i>"
+      },
+      "2022-10-20": {
+        "label": "Thursday, Oct 20 <i>/ Day 9</i>"
+      },
+      "2022-10-21": {
+        "label": "Friday, Oct 21 <i>/ Day 10</i>"
+      },
+      "2022-10-22": {
+        "label": "Saturday, Oct 22 <i>/ Day 11</i>"
+      },
+      "2022-10-23": {
+        "label": "Sunday, Oct 23 <i>/ Day 12</i>"
+      },
+      "2022-10-26": {
+        "label": "Wednesday, Oct 26"
+      }
+    }
+  },
+  "prizes": {
+    "title": "Prizes",
+    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they were awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
+    "prizes": [
+      {
+        "name": "1",
+        "description": "0.25 bitcoin!!! Stack'em!!!"
+      },
+      {
+        "name": "2",
+        "description": "0.025 bitcoin, and a jumper and a shirt by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+      },
+      {
+        "name": "3",
+        "description": "One highly-secure, bitcoin-only, Swiss made <a href=\"https://shiftcrypto.ch/bitbox02/\" target=\"_blank\" rel=\"nofollow noindex\">BitBox02</a> hardware wallet. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning Store</a>.  And a jumper by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six&nbsp;&&nbsp;Lemon</a>."
+      },
+      {
+        "name": "4",
+        "description": "Two shirts by <a href=\"https://sixandlemon.com/\" target=\"_blank\" rel=\"nofollow noindex\">Six & Lemon</a>. Two $100 gift cards for the <a href=\"https://lightning.store/\" target=\"_blank\" rel=\"nofollow noindex\">Lightning&nbsp;Store</a>."
+      }
+    ],
+    "sponsors": [
+      {
+        "image": "peak-shift.svg",
+        "width": 223,
+        "height": 55,
+        "name": "Peak Shift",
+        "description": "Peak Shift, design agency and huge supporter of bitcoin, lightning, and this&nbsp;event.",
+        "url": "https://peakshift.com/"
+      },
+      {
+        "image": "breez.svg",
+        "width": 155,
+        "height": 55,
+        "name": "Breez",
+        "description": "Breez is a versatile wallet and entry point into the lightning&nbsp;economy. ",
+        "url": "https://breez.technology/"
+      },
+      {
+        "image": "shift-crypto.svg",
+        "width": 123,
+        "height": 30,
+        "name": "Shift Crypto",
+        "description": "Manufacturer of hardware wallets. Authentic, minimalist, outside-the-box.",
+        "url": "https://shiftcrypto.ch/"
+      },
+      {
+        "image": "six-and-lemon.svg",
+        "width": 215,
+        "height": 44,
+        "name": "Six & Lemon",
+        "description": "Rep the bitcoin brand with Six and Lemon’s custom designed jumpers and&nbsp;t-shirts.",
+        "url": "https://sixandlemon.com/"
+      },
+      {
+        "image": "lightning-store.svg",
+        "width": 240,
+        "height": 42,
+        "name": "Lightning Store",
+        "description": "Obscure #Bitcoin pop cult/punk mashups for&nbsp;sale.",
+        "url": "https://lightning.store/"
+      },
+      {
+        "image": "mystery.svg",
+        "width": 103,
+        "height": 42,
+        "name": "*****",
+        "description": "Mystery sponsors. Who could they&nbsp;be?"
+      }
+    ]
+  }
+}

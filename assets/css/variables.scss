@@ -1,0 +1,91 @@
+@use "animations";
+
+$small-width: 640px;
+$large-width: 1024px;
+$huge-width: 1281px;
+$mega-width: 1601px;
+
+$borderWidth: 4px;
+
+:root {
+	--backRGB: 255, 255, 255;
+	--frontRGB: 0, 0, 0;
+
+	--front-r: 0;
+	--front-g: 0;
+	--front-b: 0;
+
+	--back-r: 255;
+	--back-g: 255;
+	--back-b: 255;
+
+	--back: #ffffff;
+	--front: #000000;
+
+	--borderOpacity: 0.07;
+
+	--primary: #FA6800;
+	--secondary: #145AC8;
+
+	--primaryDark: #EE6300;
+
+	--siteBackground: #FAECDF;
+
+	--green: #03B96C;
+	--blue: #3380FF;
+
+	--palette-0: #E88BCA;
+	--palette-1: #B1F5FD;
+	--palette-2: #E63E2A;
+	--palette-3: #E63E2A;
+
+	--palette-0-rgb: 232, 139, 202;
+	--palette-1-rgb: 177, 245, 253;
+	--palette-2-rgb: 230, 62, 42;
+	--palette-3-rgb: 230, 62, 42;
+}
+
+.-dark {
+	--back: #000000;
+	--front: #ffffff;
+	
+	--backRGB: 0, 0, 0;
+	--frontRGB: 255, 255, 255;
+
+	--borderOpacity: 0.14;
+
+	--primary: #FA6800;
+	--secondary: #145AC8;
+
+	--siteBackground: #080808;
+}
+
+.-palette-1 {
+	--palette-0: #A64AC9;
+	--palette-1: #FFB38F;
+	--palette-2: #FD6E23;
+
+	--palette-0-rgb: 166, 74, 201;
+	--palette-1-rgb: 255, 179, 143;
+	--palette-2-rgb: 253, 110, 35;
+}
+
+.-palette-2 {
+	--palette-0: #EA2E00;
+	--palette-1: #16A9E1;
+	--palette-2: #17E9E0;
+
+	--palette-0-rgb: 234, 46, 0;
+	--palette-1-rgb: 22, 169, 225;
+	--palette-2-rgb: 23, 233, 224;
+}
+
+.-palette-3 {
+	--palette-0: #EA2E00;
+	--palette-1: #9DBDB8;
+	--palette-2: #ffcaaf;
+
+	--palette-0-rgb: 234, 46, 0;
+	--palette-1-rgb: 157, 189, 184;
+	--palette-2-rgb: 255, 202, 175;
+}

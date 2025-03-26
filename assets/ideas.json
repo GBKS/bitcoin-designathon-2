@@ -1,0 +1,484 @@
+[
+    {
+        "id": "rec1wpt2Iu14GgmvK",
+        "createdTime": "2022-09-22T08:58:11.000Z",
+        "fields":
+        {
+            "Description": "Let's create open-source 3D assets to be used on bitcoin-related websites - basically make it easy for bitcoin sites to look great. For an example, see the [3D freebies](https://3d-freebies.peakshift.com) by Peakshift.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recpHtNJ0phMRS7mS",
+                "recmYuIdO7aZcZWIz"
+            ],
+            "Name": "Bitcoin 3D assets"
+        }
+    },
+    {
+        "id": "rec2CwOTkhwW6hU3d",
+        "createdTime": "2022-10-04T12:18:11.000Z",
+        "fields":
+        {
+            "Projects": [
+                "rec1gNAxXIF9OZtS5"
+            ],
+            "Description": "Bitcoin education can be life changing.  To spread knowledge on how to bitcoin & BUIDL should be simple & friendly. Visual elements for diagrams and workshops  may be a useful tool to help you share your thoughts on those rabbit holes that keep pulling you deeper.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recHrKkNHVnqA6rUd"
+            ],
+            "Project submissions": [
+                "rec42Y6bywzizXgX7"
+            ],
+            "Name": "Deconstructing Bitcoin + Tech"
+        }
+    },
+    {
+        "id": "rec3KvZzVM7AaMvm5",
+        "createdTime": "2022-09-22T09:00:47.000Z",
+        "fields":
+        {
+            "Projects": [
+                "rec8GvDUPMZanAubQ"
+            ],
+            "Description": "What solutions could we design to make it easier to use bitcoin more privately. Some suggestions below:\n- How to design for BIP47\n- How to prevent users from re-using on-chain addresses\n- UTXO management for beginners\n\n",
+            "Status": "Visible",
+            "Participants": [
+                "recueWmX2PEalqp43",
+                "recTZ3WfX7c9CRIJa"
+            ],
+            "Project submissions": [
+                "recYZ32lwChObI2wC"
+            ],
+            "Name": "Privacy"
+        }
+    },
+    {
+        "id": "rec49iZvMKfatUiOg",
+        "createdTime": "2022-09-22T07:34:32.000Z",
+        "fields":
+        {
+            "Description": "A website for professionals / academics that curates all of the research done / being done on bitcoin. Philosophy, psychology, social studies, environment, financial inclusion, anything that has been researched and perhaps tested in some way. Create this ultimate resource that policy makers can reference when creating bitcoin-related policies. Make it feel very academic-y ;)\n",
+            "Status": "Visible",
+            "Participants": [
+                "rec095V210RTU1Nfi",
+                "recHrKkNHVnqA6rUd"
+            ],
+            "Name": "Academic research site"
+        }
+    },
+    {
+        "id": "recAWWRUo230yd379",
+        "createdTime": "2022-09-22T07:36:21.000Z",
+        "fields":
+        {
+            "Description": "A website that lists all of the concerns about bitcoin and addresses them / debunks them with facts. Perhaps designed as a card view or a quiz where you flip the card to see the answer? Would love to see all of the cards on one screen.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recTZ3WfX7c9CRIJa"
+            ],
+            "Name": "Debunking concerns"
+        }
+    },
+    {
+        "id": "recBzMMVzNknsgmGp",
+        "createdTime": "2022-09-22T07:37:13.000Z",
+        "fields":
+        {
+            "Description": "Being in control of our identity and data online is a bitcoin-adjacent topic that has seen a lot of discussion with efforts like [Web5](https://developer.tbd.website/projects/web5/) and [Slashtags](https://github.com/synonymdev/slashtags). Let's investigate how credentials (college degree, event attendance), digital ownership certificates (e-books), real-world ownership certificate (land, house, pets, sneakers…), in-game assets, and similar use cases could work.\n\n",
+            "Status": "Visible",
+            "Participants": [
+                "recUHI4vK74gmbAHI"
+            ],
+            "Name": "Decentralized identifiers"
+        }
+    },
+    {
+        "id": "recCUNxJFSoy2niWh",
+        "createdTime": "2022-09-20T16:47:27.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recgDYQhrUEpQLVZU"
+            ],
+            "Description": "Conceptualize and design a first point of contact game for bitcoin curious devs. Learners complete test-driven, repl-based (preferably [replit](https://replit.com/)) lessons by completing missions traveling through bitcoin history. Beginners can breeze through the basics while more advanced learners can dive into the harder challenges and discover easter eggs. In the future, we could add pay for lesson completion or offer real world challenges for pay like Ender’s Game.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recIfGYWfITN0lYgK"
+            ],
+            "Name": "Learn bitcoin coding via a game"
+        }
+    },
+    {
+        "id": "recFTNGXvy7zQUQq9",
+        "createdTime": "2022-09-20T16:32:14.000Z",
+        "fields":
+        {
+            "Description": "Forget about how you use bitcoin today and think of your ideal experience now and in the future. What should that feel like? How would it manifest itself in your day-to-day? Whether it's realistic or Iron Man holographic UI, this project is about blue sky exploration.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recqexMB8Ri7OmRAk"
+            ],
+            "Project submissions": [
+                "recTK5Vtm9Ur6QXF8"
+            ],
+            "Name": "Blank slate"
+        }
+    },
+    {
+        "id": "recHtl2ukj9pNyRUi",
+        "createdTime": "2022-09-22T07:36:50.000Z",
+        "fields":
+        {
+            "Projects": [
+                "reczzM7Rvbxd2ddmh"
+            ],
+            "Description": "How to hand bitcoin down to your family as seamlessly as possible? What happens if the bitcoiner in the family all of a sudden kicks the bucket? Who is going to assist the non-technical people and how? Could there be a website / platform that somehow guides the family member along the way, revealing certain information or directing them where to look? How will people be notified that this service exist - will they ignore it? … think it’s a scam? \n",
+            "Status": "Visible",
+            "Participants": [
+                "recqW7jzyMYmgCt19",
+                "recmYuIdO7aZcZWIz",
+                "recQhHSMxDoCw3aXV",
+                "recDXtso9zpCEINbq",
+                "reciXsMQf7vl4e2mr",
+                "recWKRPGMmS3PyUCj"
+            ],
+            "Project submissions": [
+                "recRTPeCpD2kixgrq"
+            ],
+            "Name": "Inheritance"
+        }
+    },
+    {
+        "id": "recIV0Wgr9YzD27bv",
+        "createdTime": "2022-10-03T07:30:30.000Z",
+        "fields":
+        {
+            "Description": "A talkative BTC and LN wallet for blind people. Current standards lead to a QR Code being read to you which is not very helpful. IMO, it connects to the LNkids idea, from there you have real values to read (send x sats to mom). Blind people should not have a need to rely on another one to setup and administer a wallet.\n",
+            "Status": "Visible",
+            "Name": "LNtalk"
+        }
+    },
+    {
+        "id": "recIcYu4en8BX6SPM",
+        "createdTime": "2022-09-29T08:28:00.000Z",
+        "fields":
+        {
+            "Description": "Design a lightning wallet that allows for quick and easy payments between friends, family, and other close contacts. Read about [the full idea here](https://makers.bolt.fun/story/hackathon-project-ln-app-focused-around-paying-requesting-people-you-know--124).\n",
+            "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
+            "Project submissions": [
+                "rechwm6mPTVM6KD8J"
+            ],
+            "Name": "Lightning app with contacts"
+        }
+    },
+    {
+        "id": "recJ8gsCbEH2JeMPq",
+        "createdTime": "2022-09-29T08:29:40.000Z",
+        "fields":
+        {
+            "Description": "Clearing out a lightning wallet is not so simple because of the channel reserve and involved fees. Current applications don't necessarily solve this in an elegant way. Can we come up with good UX guidelines for this user flow?\n\nThis was discussed in a [Slack thread](https://bitcoindesign.slack.com/archives/C015856BDME/p1662976808397559), initiated by [this post](https://lists.linuxfoundation.org/pipermail/lightning-dev/2022-August/003674.html).\n",
+            "Status": "Visible",
+            "Participants": [
+                "recVnBrUzykMV64Ap",
+                "recQhHSMxDoCw3aXV",
+                "recqexMB8Ri7OmRAk"
+            ],
+            "Name": "UX for sweeping lightning wallets"
+        }
+    },
+    {
+        "id": "recLfC57m6K2vUPsp",
+        "createdTime": "2022-10-11T10:45:00.000Z",
+        "fields":
+        {
+            "Description": "Project \"[LittleBit](https://littlebitsa.company.site)\" - I, @wyndetta, based in Cape Town, South Africa and partnered with Galoy.io to create an application which will drastically improve accessibility and accelerate consumer adoption for using bitcoin over the lightning network as a daily currency.\n\nAimed at the lower income communities and going to market with creative concept marketing strategies deployed to existing micro-economic ecosystems and fostering the newly created bitcoin based economy with on the ground human resource brand representatives and other initiatives to sustain the continued usage and expanding reach beyond our launchpad.\n\nGaloy provides the GaloyMoney Core software instance as well as their Stablesats integration allowing users to hold value pegged against the dollar if the user intends to avoid any drastic volatilities that comes with holding value only in bitcoin... the kicker comes in witch enabling each LittleBit user to issue bitcoin \"vouchers\" at will and incentivizing the share, resell and usage of these with peers.\n\nThis has to be thoroughly explained to properly understand the concept but it is bullish AF :) Furthermore it creates community based ecosystems further boosting the efforts to hyperbitcoinise Africa. The application also needs to be modular in order to adapt to other African countries with ease and some adaptation is needed to the GaloyMoney Core. Picture the bitcoin beach wallet but more like a bitcoin Savanna or \"bushveld\" lightning wallet with \"Made for Africa\" interfaces, functionalities and a self contained bitcoin dispensary essentially making every user an independent bitcoin ATM :)\n\nI do need a tech co-founder/partner for my project and have come as far as possible on my own speed and initiative. Passing first round meetings with VC's like Fulgur Ventures, Timechain, Recursive Capital and Lightning Ventures, along with great advisory support and a level of Angel investment from the CEO of Swan Bitcoin, Cory Klippsten. The project has great forward momentum as it stands and with the right tech partner (and hopefully this initiative of yours) we can get an MVP to the VC's to secure our seed round.\n\nNeed help with:\n\\- Front end Dev\n\\- Back end Dev\n\\- UX/UI\n\\- Venture Funding\n\\- Business Support\n\\- Financial Support\n",
+            "Status": "Visible",
+            "Name": "LittleBit"
+        }
+    },
+    {
+        "id": "recMoVDpCnFVslBX7",
+        "createdTime": "2022-09-22T07:33:00.000Z",
+        "fields":
+        {
+            "Description": "Bitcoin resources are scattered and disorganized. Information is buried in untranscribed podcasts, youtube videos, [bitcointalk](https://bitcointalk.org/), [mailing list posts](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/), [IRC logs](https://bitcoin-irc.chaincode.com/), StackOverflow, Reddit, newsletters, GitHub comments, books, and Twitter. After years of tracking me, Google still doesn’t know what I mean by ‘Lightning’ or ‘wallets’. With a corpus of relevant materials, we could create: customized bitcoin search portals, customized curriculum and learning tools (e.g. auto-generated spaced repetition flashcards) and bots to answer questions. Neural networks can make the initial suggestions and humans can train the models with upvotes (and even earn some sats for their contributions).\n",
+            "Status": "Visible",
+            "Name": "Search bitcoin"
+        }
+    },
+    {
+        "id": "recNo1SaoTYgYRhLJ",
+        "createdTime": "2022-09-20T16:38:05.000Z",
+        "fields":
+        {
+            "Projects": [
+                "rec6l1IRlfij5QkwV"
+            ],
+            "Description": "How can we gently introduce the next generation to bitcoin and managing money? What is appropriate at different ages, and how can this be expressed in different user experiences? Let's explore different scenarios and see how far we can take them.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recueWmX2PEalqp43",
+                "recqexMB8Ri7OmRAk",
+                "recu5yyy9o4ZgcMDt"
+            ],
+            "Project submissions": [
+                "rec5S3JE2SEhyiOPh",
+                "recO8eeHP7Aq6c1aZ"
+            ],
+            "Name": "A bitcoin app for kids"
+        }
+    },
+    {
+        "id": "recQMQluOsOFtoan7",
+        "createdTime": "2022-09-22T07:34:59.000Z",
+        "fields":
+        {
+            "Description": "A website listing all of the politicians who have done something for Bitcoin, and all those who oppose it - for every major country. This way people can quickly search who is full of it and vote them out. Create a way to organize action around each elected individual - organize in some manner to create grassroots movements to get them out of their positions by promoting a bitcoin-only-friendly opponent.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recHrKkNHVnqA6rUd"
+            ],
+            "Name": "Politicians & bitcoin"
+        }
+    },
+    {
+        "id": "recURxkSWxV5n4cE8",
+        "createdTime": "2022-10-12T08:11:27.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recGuKE6Hxc8IcHbx"
+            ],
+            "Description": "Problem:\nVehicle charging points availability away from home.\n\nSolution:\nPeer to peer app for offering and tapping into charging points for the cost of electricity + a bit of incentive, paid with btc.\n\nFor example I'm visiting another city and I want to charge my car at the best cost/KWh in proximity not caring about charge speed.\nOr: I'd like to get to the fastest charging point available in the area with the cost/KWh being secondary.\n\nLuckily I have this app (to be designed) where I can check the local carge points (offered by other users or companies), giving me the cost and characteristics of the dock, where I can pay with btc/ln to tap in for a set period of time.\n\nBy Raz.\n",
+            "Status": "Visible",
+            "Project submissions": [
+                "rec2o5Fa8wFft9ivj"
+            ],
+            "Name": "Bcharge"
+        }
+    },
+    {
+        "id": "recVduRjdaSEPWb2x",
+        "createdTime": "2022-10-03T07:29:26.000Z",
+        "fields":
+        {
+            "Description": "As self custody becomes more mainstream, the seed phrase will be normalized. However, I think we may be able to do more to help folks understand the power of the seed phrase during the creation and restoration process. When you create a seed phrase on a Ledger or other signing device, you get a sense that the seed phrase is not purely random and that there is something interesting going on in the background. That sense is bolstered when you restore your wallet using your seed phrase. What is that sense? Can we unpack this a bit more for the user? A worthy challenge.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recTZ3WfX7c9CRIJa"
+            ],
+            "Name": "Visualize cryptography"
+        }
+    },
+    {
+        "id": "recXnRJbsFO3V7PjW",
+        "createdTime": "2022-10-11T06:52:43.000Z",
+        "fields":
+        {
+            "Description": "**Gift sats without losing them ✨**\n\nOn-board nocoiners via tips without losing your sats.\n\n**Project Scope**\nA web app that allows bitcoiners to tip nocoiners via the lightning network with a super lightweight on-ramp interface and user flow. Nocoiners can claim their sats by scanning a QR Code and validating their phone number, they can then withdraw their sats to their desired lightning wallet once they are educated. The web app will require the functionality of adding expiration dates set by the sender in case the user does not withdraw their sats they will be returned back to the sender.\n\n**Problem**\nThere is no quick and easy way to tip bitcoin to a nocoiner without teaching them how to download and set up a bitcoin lightning wallet. When someone gets tipped either at a restaurant or for any service provided there isn’t much time to be spent going through a whole lightning wallet onboarding process. Another concern is lost sats to nocoiners who might eventually lose access to their wallet access.\n\n**Solution**\nA super lightweight onboarding ramp to send and receive bitcoin as tips for nocoincers. Send a tip and all the receiving user has to do is scan a QR Code, and open up a web app to claim the tip using their phone number via 2FA. The tip is set with a withdrawal expiration day, if it is not claimed or withdrawn within a set period of time the funds are refunded to the sender‘s wallet.\n\n**Sender user flow**\n\\- Login via LN Wallet - (LNURL-auth)\n\\- Create Tip\n \\- Create a new shallow wallet\n \\- Create LN invoice\n \\- Set expiration time period\n \\- Fund invoice\n \\- Generate QR Code (Shallow wallet + funds to be claimed)\n\\- Sender Dashboard with tip redemption status\n \\- Claimed\n \\- Withdrawn\n \\- Refunded\n\n**Receiver user flow (Onboard)**\n\\- Scans QR Code\n\\- Opens up web app with the tip amount\n\\- Claims tip via Phone Number\n\\- 2FA is sent for phone number verification\n\\- A shallow wallet is linked with a phone number\n\\- Show sats balance (currency balance) + redemption expiration countdown\n\\- Withdrawal functionality to lightning wallet\n\n**Off-boarding User**\nEducation guides for the following actions:\n\\- Withdraw funds to a wallet\n\\- Spend funds at lightning-enabled sites or stores\n\\- Donate funds to users\n\\- Load funds to a virtual visa card\n\\- Spend sats to read articles\n\\- Send remittances\n",
+            "Status": "Visible",
+            "Name": "Lightsats"
+        }
+    },
+    {
+        "id": "recam5ImsgWrprC17",
+        "createdTime": "2022-09-22T07:35:58.000Z",
+        "fields":
+        {
+            "Description": "A creative website that estimates the usage of energy by the current fiat system - everything from administration required, the banking system, the systems that support the banking, the oversight, enforcement, and even perhaps down to the military (as a broad case). Then compares that to the energy usage of Bitcoin. Uses lots of research to support every claim, cite studies etc. Somehow have it interactive? It would just be great to have a resource that positions bitcoin against fiat, not against lower nothingburgers. \n",
+            "Status": "Visible",
+            "Participants": [
+                "recpHtNJ0phMRS7mS",
+                "recmYuIdO7aZcZWIz",
+                "recUHI4vK74gmbAHI"
+            ],
+            "Name": "Site for energy usage"
+        }
+    },
+    {
+        "id": "recanb2hzIWpULZId",
+        "createdTime": "2022-09-20T16:36:04.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recDDtCkUhhw8WBEn"
+            ],
+            "Description": "Taro will allow for the creation and use of assets on the lightning network. What will those assets be? How will we create and interact with them? What will they enable us to do? Let's learn about this tech, envision use cases and user experiences, and if there's some time create mock-ups and prototypes.\n\n[More about Taro](https://bitcoinmagazine.com/technical/how-bitcoin-taro-protocol-works)\n",
+            "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ",
+                "recTZ3WfX7c9CRIJa",
+                "recu5yyy9o4ZgcMDt",
+                "recUHI4vK74gmbAHI"
+            ],
+            "Name": "Taro!"
+        }
+    },
+    {
+        "id": "recd90OXCtbtOaMb5",
+        "createdTime": "2022-09-20T16:51:22.000Z",
+        "fields":
+        {
+            "Description": "It can take a long time for technical changes to be broadly adopted by wallets, exchanges, etc. The Bitcoin Design Community is a good candidate to help promote standards and adoption, as the recent [Unified QR code](https://bitcoinqr.dev) effort has shown. Another one is in progress around Taproot. Let's think through what else we can do.\n\n",
+            "Status": "Visible",
+            "Participants": [
+                "recueWmX2PEalqp43"
+            ],
+            "Name": "Tech adoption & standards"
+        }
+    },
+    {
+        "id": "rechomA4XgpNUuGd4",
+        "createdTime": "2022-09-22T07:16:42.000Z",
+        "fields":
+        {
+            "Description": "The community has been around for over 2 years. What should its future look like? What role does it and should it play in the wider bitcoin ecosystem? We can discuss and also use this time to tweak the website, overall presentation, social media, create swag, and anything else we come up with.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recueWmX2PEalqp43",
+                "recHrKkNHVnqA6rUd"
+            ],
+            "Name": "The Bitcoin Design Community"
+        }
+    },
+    {
+        "id": "recocibRiWfHIV0s1",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recVLdKX09W2QAgL6",
+                "recMhmqrji2BkNksm"
+            ],
+            "Description": "The foundation of Lightning is maturing, and new protocols and capabilities are built in top. Lightning applications are becoming incredibly easy to build. What new and exciting things can we do with that?\n",
+            "Status": "Visible",
+            "Participants": [
+                "recueWmX2PEalqp43",
+                "recVnBrUzykMV64Ap",
+                "recgbIIYqWk58kDbQ",
+                "recUHI4vK74gmbAHI"
+            ],
+            "Project submissions": [
+                "recZNNfdxRqat3vi2",
+                "rec5FzEnQ8IGzjY3h",
+                "recjGf2mHXIEHVdtO"
+            ],
+            "Name": "Lightning apps"
+        }
+    },
+    {
+        "id": "recq2SXycclLUubMy",
+        "createdTime": "2022-10-10T07:50:58.000Z",
+        "fields":
+        {
+            "Description": "Open fortune cookies with bitcoin related themes by paying a small lightning invoice or write custom once which are sent via Twitter bot and/or Telegram bot.\n\nSee: [bitcoinfortunecookie.com](https://bitcoinfortunecookie.com/)\n\nI can't remember if I submitted this idea before.. Sorry, if double, please ignore and excuse me. Thank you.\n\nAnyway, the site has been live for a while but functionality has been spotty (due to my lack of skills).\n\nKind regards,\n\n[artdesignbysf.com](https://artdesignbysf.com/)\n[@artdesignbysf](https://twitter.com/artdesignbysf)\n",
+            "Status": "Visible",
+            "Participants": [
+                "recTZ3WfX7c9CRIJa"
+            ],
+            "Name": "Bitcoin Fortune Cookie"
+        }
+    },
+    {
+        "id": "recsK2PERgVLU41n1",
+        "createdTime": "2022-10-03T07:29:57.000Z",
+        "fields":
+        {
+            "Projects": [
+                "rec6l1IRlfij5QkwV"
+            ],
+            "Description": "A LN Wallet for kids & analphabets as proposed here a while ago on [GitHub](https://github.com/BitcoinDesign/Guide/discussions/606) and [Slack](https://github.com/BitcoinDesign/Guide/discussions/606).\n\n",
+            "Status": "Visible",
+            "Participants": [
+                "recUHI4vK74gmbAHI"
+            ],
+            "Name": "LNKids wallet"
+        }
+    },
+    {
+        "id": "rectUuzbTc4mobWU1",
+        "createdTime": "2022-10-04T12:16:47.000Z",
+        "fields":
+        {
+            "Description": "**What is this?**\n\\- An exploration tool for the Bitcoin open-source ecosystem.\n\\- An easier way to point to innovation.\n\\- An easier way for someone to find interesting things to work on.\n\\- (extend) A platform to help financially support open-source contributors?\n\n**Origin Story**\nGoing down the open-source developer path, I wanted to educate myself around the funding opportunities that exist. That's how I [initially came up](https://twitter.com/kouloumos/status/1476570418521772033) with [whofundsbitcoin.com](http://whofundsbitcoin.com/), a website showcasing those that fund Bitcoin development. \n\nFrom the start, I didn't want that project to only be about funding, rather to further develop it as the go-to resource for anyone eager to explore what individual Bitcoin developers are working on, unraveling all the cool things happening on Bitcoin. This was meant to be an exploration tool for the Bitcoin open-source ecosystem. **I soon realized that funding-centric was not the way to go. It should be project-centric.** \n\nThat's how **\"Who Funds Bitcoin\" evolved to \"Who Builds Bitcoin\".**\n\n**Design Briefing**\nI’m playing with this idea in my mind for close to a year now. I've implemented it once (with [whofundsbitcoin.com](http://whofundsbitcoin.com/)) and **I’ve since observing shortcomings and thinking about the next iteration.** \n\nBelow are some of my thoughts on how I think this could be set up for success.\n\n**Visualizations**\nThe basis of the idea is a visualization. \"Who Funds Bitcoin\" uses nodes for entities and edges for the funding connections between them. This becomes very messy, very fast. \n\nA better idea could be click-to-expand like what [https://lnlighthouse.online/](https://lnlighthouse.online/https://lnlighthouse.online/) ([src](https://twitter.com/saiy2k/status/1560640578467303429)) uses. And you could click something like [this](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fkouloumos%2FLODruWQhGe.jpeg?alt=media&token=5ff7c088-d0de-4567-865c-0dc4e609398c) - Bitcoin as the central hexagon and on the outside: P2P, Privacy, Mining, Wallet, Bitcoin Core, Lightning, etc. You click on those and it further expands until you reach the contributors of each part, the people working on each innovation. \n\n**Attractive for contributors**\nMaintaining an aggregation side is hard. And even if you do so, you'll probably missing stuff. You have to make it self-reporting. Think about [https://bitcoindevlist.com/](https://bitcoindevlist.com/https://bitcoindevlist.com/) where developers submit their own information for people to support them. \n\nThat means that every contributor listed on the site is updating his own information. Think something like:\n`{\"name\": \"Andreas\", \"github\": \"...\", \"twitter\": \"...\", \"description\": \"...\", \"tags\": [\"Bitcoin Core\"]}`\n The tags attribute will then be used to add each one on the visualization. \n\nTaking it a step further, clicking on each contributors can open a sidebar with a **timeline of work related updates**. A contributor can maybe add an update once a quarter with his/her current interest, kind of how a summary is presented on funding announcements. **This could evolve to a better platform for financial support of contributors.**\n\n_Although I am ignoring some technical details since this is design talk, this part gets a bit more technical._\n**You now need a way to make this as easy as possible for contributors to self-report their own data.** I think the best tool for such a job is [nostr](https://github.com/nostr-protocol/nostr). People will be able to use whatever tool they want to submit data and Who Builds Bitcoin will be just a client, reading data from a relay. No need for a database, therefore providing an easy, interoperable way for people to add data. \n\nI've been obsessing over this idea for a long time now but my priorities do not allow me to start writing code for this. I was looking for an opportunity to get external input and maybe some design help, therefore this is the best opportunity to let this out in the wild.\n",
+            "Status": "Visible",
+            "Name": "Who Builds Bitcoin"
+        }
+    },
+    {
+        "id": "recuHCc6H6D2VXqAW",
+        "createdTime": "2022-09-29T08:27:07.000Z",
+        "fields":
+        {
+            "Description": "How to we include the next billion of users on Bitcoin? How to we make Bitcoin cater to the needs of the so-called unbanked population, that is generally not tech-savvy and may not have even access to Internet? How do we provide them with more much-needed services than just savings and payments? Let's explore some ideas together!\n",
+            "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ"
+            ],
+            "Project submissions": [
+                "recNtYKBJmqOehuIZ",
+                "recO8eeHP7Aq6c1aZ"
+            ],
+            "Name": "Bitcoin inclusion"
+        }
+    },
+    {
+        "id": "recudoRs8nmX4WMFI",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recSB5YKJSaCrSCCp"
+            ],
+            "Description": "We need many different solutions for bitcoin custody that work for diverse individuals and communities around the globe. For example, [FediMint](https://fedimint.org) is a protocol for payments and custody in a community-context. How will this be used considering cultural and geographical differences? What other custody solutions do we need?\n",
+            "Status": "Visible",
+            "Participants": [
+                "recQhHSMxDoCw3aXV",
+                "recUHI4vK74gmbAHI"
+            ],
+            "Project submissions": [
+                "recbqDKLyfMMKw15x",
+                "recqoh1TeAiH518NH"
+            ],
+            "Name": "Our keys, our coins"
+        }
+    },
+    {
+        "id": "recvRaUVb2HrbauBe",
+        "createdTime": "2022-09-13T08:43:38.000Z",
+        "fields":
+        {
+            "Projects": [
+                "recCDvi5Lkqb0KgBd"
+            ],
+            "Description": "Images created through artificial intelligence (Dall-E, Midjourney, Stable Diffusion) have been a hot trend (see [lexica.art](https://lexica.art)). Let’s explore these new tools together.\n",
+            "Status": "Visible",
+            "Participants": [
+                "recpHtNJ0phMRS7mS",
+                "reciXsMQf7vl4e2mr",
+                "recFrsNRrotcAhf1k",
+                "rec095V210RTU1Nfi",
+                "recAAjPre4aA9OWHT"
+            ],
+            "Name": "Bitcoin AI art"
+        }
+    },
+    {
+        "id": "recy955e0bfIwa8o6",
+        "createdTime": "2022-09-22T07:35:37.000Z",
+        "fields":
+        {
+            "Description": "A website that creatively shows all of the documentaries and other well-produced educational content about Bitcoin. Basically a go-to source for carefully curated, highest quality content. For average person. Think Netflix for Bitcoin-related content (with awesome cover art).\n",
+            "Status": "Visible",
+            "Participants": [
+                "recgbIIYqWk58kDbQ",
+                "recFrsNRrotcAhf1k",
+                "recHrKkNHVnqA6rUd"
+            ],
+            "Name": "Bitcoin documentary site"
+        }
+    }
+]
