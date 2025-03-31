@@ -228,8 +228,6 @@ export default {
 @use "@/assets/css/mixins.scss";
 
 .banner-title {
-  position: relative;
-
   position: absolute;
   left: 0;
   top: 0;
@@ -238,6 +236,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  container-type: size;
+  container-name: aspect-container;
 
   // display: none;
   // left: 50%;
@@ -248,6 +248,13 @@ export default {
     overflow: visible;
     width: auto;
     height: 100%;
+  }
+
+  @container aspect-container (aspect-ratio <= 2.0765) {
+    svg {
+      width: 100%;
+      height: auto;
+    }
   }
 
   @include mixins.media-query(small) {
