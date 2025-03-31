@@ -21,6 +21,7 @@ export default {
     'link',
     'icon',
     'color',
+    'textColor',
     'size',
     'invert',
     'disabled'
@@ -58,6 +59,10 @@ export default {
         s.backgroundColor = this.color
       }
 
+      if(this.textColor) {
+        s.color = this.textColor || null
+      }
+
       return s
     },
 
@@ -91,7 +96,8 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 2px solid var(--front);
+  background-color: white;
+  // border: 2px solid var(--front);
   text-decoration: none;
   border-radius: 1000px;
   font-weight: 900;
@@ -102,12 +108,12 @@ export default {
   height: 48px;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
   @include mixins.r('font-size', 17, 22);
 
   svg {
     width: 25px;
     height: 25px;
-    color: var(--front);
   }
 
   &:nth-child(2) {
@@ -118,20 +124,6 @@ export default {
     svg {
       margin-right: 0;
     }
-  }
-
-  &:before {
-    display: block;
-    content: '';
-    border: 2px solid rgba(var(--frontRGB), 0.2);
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    pointer-events: none;
-    border-radius: 1000px;
-    transition: all 150ms ease-in-out;
   }
 
   &.-small {

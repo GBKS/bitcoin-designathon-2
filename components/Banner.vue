@@ -1,36 +1,43 @@
 <template>
   <div :class="classObject" :style="styleObject" ref="canvas">
-    <BannerCircles
-      :palette="palette"
-      :bannerSize="bannerSize"
-      :isMobile="isMobile"
-    />
     <div class="title">
-      <a href="https://bitcoin.design" title="Bitcoin Design">
-        <img
-          src="~/assets/images/seal.svg"
-          alt="Bitcoin design community logo"
-        />
-      </a>
-      <BannerTitle
-        :palette="palette"
-        :moving="moving"
-        @hoverLetter="hoverLetter"
-        @unhoverLetter="unhoverLetter"
+      <SealButton
+        :color="palette.seal"
+        :shadowOpacity="palette.typeShadowOpacity"
       />
-      <p v-html="copy.text" />
+      <div class="letters" :style="letterStyle">
+        <BannerCircles
+          v-if="false"
+          :palette="palette"
+          :bannerSize="bannerSize"
+          :isMobile="isMobile"
+        />
+        <BannerTitle
+          :palette="palette"
+          :moving="moving"
+          :bannerSize="bannerSize"
+          :isMobile="isMobile"
+          @explode="addExplosion"
+          @hoverLetter="hoverLetter"
+          @unhoverLetter="unhoverLetter"
+        />
+      </div>
+      <p v-html="copy.text" :style="copyStyle" />
       <div class="options" v-if="showButtons">
         <SuperButton
           link="https://discord.gg/K7aQ5PErht"
           label="Bitcoin Design Discord"
           size="small"
-          :color="palette[1]"
+          :color="palette.button.background"
+          :textColor="palette.button.label"
         />
         <SuperIconButton
+          v-if="false"
           link="nostr:npub13s5mxgws70rpxsug96jfvglggackjrxs2ehypwg0prjaxsek42sqd9l03e"
           icon="nostr"
           size="small"
-          :color="palette[1]"
+          :color="palette.button.background"
+          :textColor="palette.button.label"
         />
       </div>
     </div>
@@ -64,7 +71,9 @@ export default {
       copy: copy.banner,
       moving: false,
       showButtons: !false,
-      bannerSize
+      bannerSize,
+      explosions: [],
+      idCounter: 0
     }
   },
 
@@ -101,6 +110,18 @@ export default {
       return s
     },
 
+    letterStyle() {
+      return {
+        filter: "drop-shadow(20px 20px 0 rgb(0 0 0 / " + this.palette.typeShadowOpacity + "))"
+      }
+    },
+
+    copyStyle() {
+      return {
+        color: this.palette.bodyText
+      }
+    },
+
     linkStyle() {
       return {
         backgroundColor: this.palette[1]
@@ -111,6 +132,17 @@ export default {
   methods: {
     animate() {
       this.moving = true
+    },
+
+    addExplosion(info) {
+      info.id = 'e_'+this.idCounter
+      this.idCounter++
+
+      this.explosions.push(info)
+    },
+
+    removeExplosion(id) {
+      this.explosions = this.explosions.filter(e => e.id !== id)
     },
 
     onResize() {
@@ -149,8 +181,8 @@ export default {
 
   .title {
     // position: absolute;
-    left: 0;
-    top: 0;
+    // left: 0;
+    // top: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -158,30 +190,39 @@ export default {
     align-items: center;
     justify-content: center;
     position: relative;
+    box-sizing: border-box;
+
+    > a {
+      transform: translateY(-50px);
+      opacity: 0;
+      transition-delay: 1800ms;
+    }
+
+    .letters {      
+      flex-grow: 1;
+      flex-basis: 10%;
+      // border: 1px solid red;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 400ms animations.$ease;
+    }
 
     @include mixins.media-query(small) {
-      // min-height: 600px;
-      min-height: 100vh;
+      min-height: 700px;
+      // height: 80dvh;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      box-sizing: border-box;
     }
 
     @include mixins.media-query(medium-up) {
       // min-height: 900px;
-      min-height: 100vh;
-    }
-
-    > a {
-      margin: 0;
-      transition: all 600ms animations.$easeOutBack;
-      transform: translateY(50px);
-      opacity: 0;
-      @include mixins.r('margin-bottom', 20, 40);
-
-      img {
-        @include mixins.rs(
-          ('width', 120, 160),
-          ('height', 120, 160)
-        );
-      }
+      height: 100vh;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      box-sizing: border-box;
     }
 
     p {
@@ -189,11 +230,12 @@ export default {
       font-weight: 600;
       text-align: center;
       color: rgba(var(--frontRGB), 0.75);
-      transition: all 600ms animations.$easeOutBack;
-      transform: translateY(-50px);
+      transition: all 1000ms animations.$easeOutCubic;
+      transform: translateY(150px);
       opacity: 0;
+      transition-delay: 1900ms;
       @include mixins.rs(
-        ('margin-top', 20, 40),
+        ('margin-top', 10, 20),
         ('font-size', 18, 27)
       );
     }
@@ -201,12 +243,11 @@ export default {
     .options {
       display: flex;
       gap: 30px;
-      transition:
-      background-color 150ms ease-in-out,
-      transform 600ms animations.$easeOutBack;
-      transform: translateY(-100px);
+      transition: all 1000ms animations.$easeOutCubic;
+      transition-delay: 2200ms;
+      transform: translateY(100px);
       opacity: 0;
-      @include mixins.r('margin-top', 40, 40);
+      @include mixins.r('margin-top', 30, 20);
 
       a:first-child {
         display: flex;

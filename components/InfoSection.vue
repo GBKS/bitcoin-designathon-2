@@ -19,7 +19,7 @@ export default {
 
   data() {
     return {
-      copy: copy.info
+      copy: copy.info.comingup
     }
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="section-header">
-    <h1>{{ title }}</h1>
+    <h1 v-html="title" />
     <p 
       v-if="description" 
       v-html="description"
@@ -40,15 +40,28 @@ export default {
   h1 {
     font-weight: 900;
     color: var(--front);
+    line-height: 1.6;
+    text-wrap: balance;
     @include mixins.r('font-size', 24, 36);
+
+    a {
+      color: var(--front);
+      transition: all 100ms animations.$ease;
+
+      &:hover {
+        color: var(--palette-0);
+      }
+    }
   }
 
   p {
     margin-top: 10px;
+    text-wrap: balance;
+    line-height: 1.6;
     @include mixins.r('font-size', 18, 20);
 
     a {
-      color: var(--palette-0);
+      color: var(--front);
       transition: all 100ms animations.$ease;
 
       &:hover {

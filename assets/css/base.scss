@@ -1,15 +1,22 @@
 @use "mixins";
 @use "animations";
 
+:root {
+  // filter: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"f\" color-interpolation-filters=\"linearRGB\"><feGaussianBlur stdDeviation=\"2\"/></filter></svg>#f');
+  // filter: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"f\" color-interpolation-filters=\"linearRGB\"><feComponentTransfer><feFuncR type=\"gamma\" offset=\"0.5\"/><feFuncG type=\"gamma\" offset=\"0.5\"/><feFuncB type=\"gamma\" offset=\"0.5\"/></feComponentTransfer></filter></svg>#f');
+}
+
+
+
 html {
-  font-family: 'Noto Sans', serif;
+  font-family: 'MPlusRounded', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @supports (font-variation-settings: normal) {
   html {
-    font-family: 'Noto Sans', serif;
+    font-family: 'MPlusRounded', serif;
   }
 }
 

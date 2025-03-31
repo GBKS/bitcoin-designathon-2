@@ -3,8 +3,14 @@
     "text": "We are getting creative with bitcoin.<br/>From May 4 to 18, 2025."
   },
   "info": {
-    "title": "Thank you for participating",
-    "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) had a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.<br/><br/>It was a blast. Thank you to all participants for your creative energy and hard work. Thank you to all who helped make this event happen, especially our amazing sponsors. Check out the participating projects below."
+    "comingup": {
+      "title": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising another designathon! Imagine a traditional hackathon, but primarily focused on design.",
+      "description": "Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. For updates, join us on <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord</a>, and on <a href=\"nostr:npub13s5mxgws70rpxsug96jfvglggackjrxs2ehypwg0prjaxsek42sqd9l03e\" target=\"_blank\" rel=\"me\">Nostr</a>."
+    },
+    "complete": {
+      "title": "Thank you for participating",
+      "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) had a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://join.slack.com/t/bitcoindesign/shared_invite/zt-10sxfovaq-isViijl4RThKRs_TsAQnuA\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.<br/><br/>It was a blast. Thank you to all participants for your creative energy and hard work. Thank you to all who helped make this event happen, especially our amazing sponsors. Check out the participating projects below."
+    }
   },
   "sponsors": {
     "title": "There will be prizes",

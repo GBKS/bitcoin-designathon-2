@@ -7,7 +7,6 @@
       @unhoverLetter="unhoverBannerLetter"
     />
     <InfoSection 
-      v-if="false"
       :palette="palette"
     />
     <ProjectsSection
@@ -40,7 +39,6 @@
       :palette="palette"
     />
     <Footer 
-      v-if="false"
       :palette="palette"
     />
   </div>
@@ -50,6 +48,37 @@
 import dummyIdeas from "~/assets/ideas.json";
 import dummyProjects from "~/assets/projects.json";
 import dummySchedule from "~/assets/schedule.json";
+
+/*
+
+Color palettes
+- Orange: E76428
+- Dark:
+Background: 00353E
+Type 1: 0797D4
+Type 2: 82C947
+Type 3: A67AC7
+Type 4: FBD905
+Type 5: E63D76
+Type 6: EBADC2
+Seal & Button label: E63D76
+- Salmon
+Background: FE7179
+Type 1-6: Same
+Text outline
+Seal: E63D76
+Button label: 000000
+- Light
+Background: F5F1E8
+Type 1: 4A8799
+Type 2: 80A850
+Type 3: F2C43A
+Type 4: DC6658
+Seal & Button label: 488192
+- Pink:
+Background: E88BCA
+
+*/
 
 export default {
 
@@ -62,14 +91,78 @@ export default {
     6 general light/dark theme
 
      */
+    // const palettes = [
+    //   ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A', null, null],
+    //   ['#A64AC9', '#FFB38F', '#FD6E23', '#FFFFFF', '#1F185B', 'dark'],
+    //   ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF', null, null],
+    //   ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF', null, null]
+    // ]
     const palettes = [
-      ['#E88BCA', '#B1F5FD', '#E63E2A', '#E63E2A', null, null],
-      ['#A64AC9', '#FFB38F', '#FD6E23', '#FFFFFF', '#1F185B', 'dark'],
-      ['#EA2E00', '#16A9E1', '#17E9E0', '#FFFFFF', null, null],
-      ['#EA2E00', '#9DBDB8', '#ffcaaf', '#FFFFFF', null, null]
+      {
+        name: 'Orange',
+        background: '#E76428',
+        seal: '#E76428',
+        button: { background: null, label: '#E76428' },
+        bodyText: '#FFFFFF',
+        type: ['#FFFFFF'],
+        typeGradient: ['#E76428'],
+        typeOutline: false,
+        typeOutlineWidth: null,
+        typeShadowOpacity: 0.25,
+        theme: null
+      },
+      {
+        name: 'Pink',
+        background: '#E88BCA',
+        seal: '#E88BCA',
+        button: { background: null, label: '#E88BCA' },
+        bodyText: '#FFFFFF',
+        type: ['#FFFFFF'],
+        typeGradient: ['#E76428'],
+        typeOutline: false,
+        typeOutlineWidth: null,
+        typeShadowOpacity: 0.25,
+        theme: null
+      },{
+        name: 'Dark',
+        background: '#00353E',
+        seal: '#E63D76',
+        button: { background: null, label: '#E63D76' },
+        bodyText: '#FFFFFF',
+        type: ['#0797D4', '#82C947', '#A67AC7', '#FBD905', '#E63D76', '#EBADC2'],
+        typeGradient: ['#0797D4', '#82C947', '#A67AC7', '#FBD905', '#E63D76', '#EBADC2'],
+        typeOutline: false,
+        typeOutlineWidth: null,
+        typeShadowOpacity: 0.25,
+        theme: 'dark'
+      },{
+        name: 'Salmon',
+        background: '#FE7179',
+        seal: '#E63D76',
+        button: { background: null, label: '#000000' },
+        bodyText: '#000000',
+        type: ['#0797D4', '#82C947', '#A67AC7', '#FBD905', '#E63D76', '#EBADC2'],
+        typeGradient: ['#0797D4', '#82C947', '#A67AC7', '#FBD905', '#E63D76', '#EBADC2'],
+        typeOutline: true,
+        typeOutlineWidth: 2,
+        typeShadowOpacity: 1,
+        theme: null
+      },{
+        name: 'Light',
+        background: '#F5F1E8',
+        seal: '#488192',
+        button: { background: null, label: '#488192' },
+        bodyText: '#4F8C9F',
+        type: ['#4A8799', '#80A850', '#F2C43A', '#DC6658'],
+        typeGradient: ['#4A8799', '#80A850', '#F2C43A', '#DC6658'],
+        typeOutline: true,
+        typeOutlineWidth: 5,
+        typeShadowOpacity: 0.25,
+        theme: null
+      }
     ]
 
-    const paletteIndex = Math.floor(Math.random()*palettes.length)
+    const paletteIndex = 0
     const palette = palettes[paletteIndex]
 
     // console.log('data', this.paletteIndex)
@@ -95,7 +188,8 @@ export default {
       palette,
       hoveredLetter: null,
       projects: null,
-      ideas: null
+      ideas: null,
+      isMounted: false
     }
   },
 
@@ -143,6 +237,14 @@ export default {
   mounted() {
     window.addEventListener('resize', this.onResize.bind(this))
 
+    this.isMounted = true
+
+    this.paletteIndex = Math.floor(Math.random()*this.palettes.length)
+    this.palette = this.palettes[this.paletteIndex]
+
+    const adjustedIndex = this.paletteIndex
+    document.querySelector('body').classList.add('-palette-'+adjustedIndex)
+
     // console.log('ideas', this.ideas)
     // console.log('projects', this.projects)
     // console.log('schedule', this.schedule)
@@ -153,8 +255,8 @@ export default {
       const c = ['home']
 
       // Dark theme
-      if(this.palette[5]) {
-        c.push('-'+this.palette[5])
+      if(this.palette.theme) {
+        c.push('-'+this.palette.theme)
       }
 
       c.push('-palette-'+this.paletteIndex)
@@ -169,13 +271,13 @@ export default {
     styleObject() {
       const s = {}
 
-      if(process.browser && this.palette[4]) {
-        s.backgroundColor = this.palette[4]
+      if(this.isMounted && process.browser && this.palette.background) {
+        s.backgroundColor = this.palette.background
       }
 
       // console.log('styleObject', this.paletteIndex)
       // console.log('palette', this.palette)
-      // console.log('s', s)
+      // console.log('s', s, JSON.stringify(s))
 
       return s
     }
@@ -184,6 +286,12 @@ export default {
   methods: {
     hoverBannerLetter(letter) {
       this.hoveredLetter = letter
+
+      document.querySelector('body').classList.remove('-palette-'+this.paletteIndex)
+
+      const adjustedIndex = letter % this.palettes.length
+      document.querySelector('body').classList.add('-palette-'+adjustedIndex)
+
       this.paletteIndex = letter%this.palettes.length
       this.palette = this.palettes[this.paletteIndex]
     },

@@ -16,6 +16,7 @@ export default {
     'link',
     'label',
     'color',
+    'textColor',
     'size',
     'invert'
   ],
@@ -42,6 +43,10 @@ export default {
 
       if(this.color) {
         s.backgroundColor = this.color
+      }
+
+      if(this.textColor) {
+        s.color = this.textColor || null
       }
 
       return s
@@ -73,14 +78,19 @@ export default {
 .super-button {
   display: inline-block;
   position: relative;
-  border: 2px solid var(--front);
+  background-color: white;
+  // border: 2px solid var(--front);
   text-decoration: none;
   border-radius: 1000px;
   font-weight: 900;
   padding: 6px 50px 7px 50px;
   color: var(--front);
   text-align: center;
-  @include mixins.r('font-size', 17, 22);
+  font-family: 'Sniglet';
+  font-weight: 900;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  @include mixins.r('font-size', 17, 35);
 
   svg {
     width: 25px;
@@ -100,23 +110,9 @@ export default {
     }
   }
 
-  &:before {
-    display: block;
-    content: '';
-    border: 2px solid rgba(var(--frontRGB), 0.2);
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    pointer-events: none;
-    border-radius: 1000px;
-    transition: all 150ms ease-in-out;
-  }
-
   &.-small {
     border-width: 1px;
-    @include mixins.r('font-size', 15, 17);
+    @include mixins.r('font-size', 15, 35);
 
     &:before {
       left: -7px;
