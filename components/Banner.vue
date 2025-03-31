@@ -207,6 +207,7 @@ export default {
       align-items: center;
       justify-content: center;
       transition: all 400ms animations.$ease;
+      position: relative;
     }
 
     @include mixins.media-query(small) {
