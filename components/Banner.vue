@@ -6,18 +6,27 @@
         :shadowOpacity="palette.typeShadowOpacity"
       />
       <div class="letters" :style="letterStyle">
-        <BannerCircles
-          v-if="false"
+        <BannerDotsLeft
           :palette="palette"
+          :moving="moving"
           :bannerSize="bannerSize"
           :isMobile="isMobile"
+          @hoverLetter="hoverLetter"
+          @unhoverLetter="unhoverLetter"
         />
         <BannerTitle
           :palette="palette"
           :moving="moving"
           :bannerSize="bannerSize"
           :isMobile="isMobile"
-          @explode="addExplosion"
+          @hoverLetter="hoverLetter"
+          @unhoverLetter="unhoverLetter"
+        />
+        <BannerDotsRight
+          :palette="palette"
+          :moving="moving"
+          :bannerSize="bannerSize"
+          :isMobile="isMobile"
           @hoverLetter="hoverLetter"
           @unhoverLetter="unhoverLetter"
         />
@@ -72,7 +81,6 @@ export default {
       moving: false,
       showButtons: !false,
       bannerSize,
-      explosions: [],
       idCounter: 0
     }
   },
@@ -132,17 +140,6 @@ export default {
   methods: {
     animate() {
       this.moving = true
-    },
-
-    addExplosion(info) {
-      info.id = 'e_'+this.idCounter
-      this.idCounter++
-
-      this.explosions.push(info)
-    },
-
-    removeExplosion(id) {
-      this.explosions = this.explosions.filter(e => e.id !== id)
     },
 
     onResize() {
@@ -211,11 +208,15 @@ export default {
     }
 
     @include mixins.media-query(small) {
-      min-height: 700px;
+      min-height: 900px;
       // height: 80dvh;
       padding-top: 60px;
       padding-bottom: 60px;
       box-sizing: border-box;
+
+      .letters {
+        flex-direction: column;
+      }
     }
 
     @include mixins.media-query(medium-up) {

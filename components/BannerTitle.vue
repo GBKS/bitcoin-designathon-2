@@ -228,11 +228,13 @@ export default {
 @use "@/assets/css/mixins.scss";
 
 .banner-title {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // height: 100%;
+  position: relative;
+  aspect-ratio: 2.0765;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,6 +263,11 @@ export default {
     svg {
       width: 90vw;
     }
+  }
+
+  @include mixins.media-query(medium-up) {
+    width: auto;
+    height: 100%;
   }
 
   path {

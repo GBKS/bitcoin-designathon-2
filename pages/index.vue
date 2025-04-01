@@ -232,13 +232,13 @@ export default {
     } else {
       const baseUrl = 'https://api.airtable.com/v0/'
 
-      const ideasUrl = baseUrl + 'appE17V3A75B99zBa/Ideas?api_key=' + env.airtableApiKey
+      const ideasUrl = baseUrl + 'appAR943q3FpYsoDk/Ideas?api_key=' + env.airtableApiKey
       const ideas = await $axios.$get(ideasUrl)
 
-      const projectsUrl = baseUrl + 'appE17V3A75B99zBa/Projects?api_key=' + env.airtableApiKey
+      const projectsUrl = baseUrl + 'appAR943q3FpYsoDk/Projects?api_key=' + env.airtableApiKey
       const projects = await $axios.$get(projectsUrl)
 
-      const scheduleUrl = baseUrl + 'appE17V3A75B99zBa/Schedule?api_key=' + env.airtableApiKey
+      const scheduleUrl = baseUrl + 'appAR943q3FpYsoDk/Schedule?api_key=' + env.airtableApiKey
       const schedule = await $axios.$get(scheduleUrl)
 
       // console.log('ideas', ideas)
