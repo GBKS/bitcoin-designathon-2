@@ -162,6 +162,20 @@ export default {
       }
     ]
 
+    const highContrastPalette = {
+      name: 'Light',
+      background: '#F5F1E8',
+      seal: '#488192',
+      button: { background: null, label: '#488192' },
+      bodyText: '#000000',
+      type: ['#4A8799', '#80A850', '#F2C43A', '#DC6658'],
+      typeGradient: ['#4A8799', '#80A850', '#F2C43A', '#DC6658'],
+      typeOutline: true,
+      typeOutlineWidth: 5,
+      typeShadowOpacity: 0.25,
+      theme: null
+    }
+
     const paletteIndex = 0
     const palette = palettes[paletteIndex]
 
@@ -170,6 +184,7 @@ export default {
     // console.log('paletteIndex', paletteIndex, palette)
 
     let windowSize, isMobile
+    let prefersHighContrast = false
 
     if(process.browser) {
       windowSize = {
@@ -178,6 +193,8 @@ export default {
       }
 
       isMobile = window.innerWidth < 640
+
+      prefersHighContrast = window.matchMedia('(prefers-contrast: more)').matches
     }
 
     return {
@@ -189,7 +206,9 @@ export default {
       hoveredLetter: null,
       projects: null,
       ideas: null,
-      isMounted: false
+      isMounted: false,
+      prefersHighContrast,
+      highContrastPalette
     }
   },
 
@@ -245,6 +264,8 @@ export default {
     const adjustedIndex = this.paletteIndex
     document.querySelector('body').classList.add('-palette-'+adjustedIndex)
 
+    this.updateHighContrast()
+
     // console.log('ideas', this.ideas)
     // console.log('projects', this.projects)
     // console.log('schedule', this.schedule)
@@ -285,6 +306,8 @@ export default {
 
   methods: {
     hoverBannerLetter(letter) {
+      if(this.prefersHighContrast) return
+
       this.hoveredLetter = letter
 
       document.querySelector('body').classList.remove('-palette-'+this.paletteIndex)
@@ -297,8 +320,24 @@ export default {
     },
     
     unhoverBannerLetter(letter) {
+      if(this.prefersHighContrast) return
+
       if(this.hoveredLetter == letter) {
         this.hoveredLetter = null
+      }
+    },
+
+    updateHighContrast() {
+      if(process.browser) {
+        this.prefersHighContrast = window.matchMedia('(prefers-contrast: more)').matches
+
+        if(this.prefersHighContrast) {
+          this.palette = this.highContrastPalette
+          this.paletteIndex = this.palettes.length
+
+          document.querySelector('body').classList.remove('-palette-'+this.paletteIndex)
+          document.querySelector('body').classList.add('-palette-'+this.paletteIndex)
+        }
       }
     },
 

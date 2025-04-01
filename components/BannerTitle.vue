@@ -452,4 +452,30 @@ export default {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .banner-title {
+    &.-moving {
+      #df, #ds,
+      #ef, #es,
+      #sf, #ss,
+      #if, #is,
+      #gf, #gs,
+      #nf, #ns,
+      #af, #as,
+      #tf, #ts,
+      #hf, #hs,
+      #of, #os,
+      #nf2, #ns2 {
+        animation: none;
+        transform: none;
+
+        .wrap {
+          opacity: 1;
+          animation: none;
+        }
+      }
+    }
+  }
+}
+
 </style>

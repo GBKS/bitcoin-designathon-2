@@ -164,4 +164,12 @@ export default {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .super-button {
+    &:hover {
+      animation: none;
+    }
+  }
+}
+
 </style>

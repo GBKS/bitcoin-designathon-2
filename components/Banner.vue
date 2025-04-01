@@ -231,10 +231,9 @@ export default {
       font-weight: 600;
       text-align: center;
       color: rgba(var(--frontRGB), 0.75);
-      transition: all 1000ms animations.$easeOutCubic;
+      transition: color 400ms animations.$easeOutCubic, opacity 1000ms animations.$easeOutCubic 1900ms, transform 1000ms animations.$easeOutCubic 1900ms;
       transform: translateY(150px);
       opacity: 0;
-      transition-delay: 1900ms;
       @include mixins.rs(
         ('margin-top', 10, 20),
         ('font-size', 18, 27)
@@ -301,6 +300,35 @@ export default {
 
   100% {
     transform: scale(1.05, 1.05);
+  }
+}
+
+// Disable animation when user prefers reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    .title {
+      > a {
+        transform: translateY(0);
+        opacity: 1;
+        transition: none;
+      }
+
+      .letters {
+        transition: none;
+      }
+
+      p {
+        transform: translateY(0);
+        opacity: 1;
+        transition: none;
+      }
+
+      .options {
+        transform: translateY(0);
+        opacity: 1;
+        transition: none;
+      }
+    }
   }
 }
 
