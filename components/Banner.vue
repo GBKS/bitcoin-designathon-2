@@ -193,6 +193,15 @@ export default {
       transform: translateY(-50px);
       opacity: 0;
       transition-delay: 1800ms;
+      position: relative;
+      z-index: 1;
+      
+      svg {
+        @include mixins.rs(
+          ('width', 100, 160),
+          ('height', 100, 160)
+        );
+      }
     }
 
     .letters {      
@@ -208,10 +217,10 @@ export default {
     }
 
     @include mixins.media-query(small) {
-      min-height: 900px;
+      min-height: 700px;
       // height: 80dvh;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       box-sizing: border-box;
 
       .letters {
