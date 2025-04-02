@@ -164,45 +164,41 @@ export default {
 @use "@/assets/css/mixins.scss";
 
 .banner-dots-right {
-  // position: absolute;
-  // left: 0;
-  // top: 0;
-  // width: 100%;
-  // height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   aspect-ratio: 0.871;
-  container-type: size;
-  container-name: aspect-container;
-  box-sizing: border-box;
-  padding-right: 30px;
+  // align-items: center;
+  // container-type: size;
+  // container-name: aspect-container;
+  // box-sizing: border-box;
 
   svg {
     overflow: visible;
-    width: auto;
-    height: 50%;
+    width: 100%;
+    height: auto;
   }
 
-  @container aspect-container (aspect-ratio <= 2.0765) {
-    svg {
-      width: 100%;
-      height: auto;
-    }
-  }
+  // @container aspect-container (aspect-ratio <= 2.0765) {
+  //   svg {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
 
   @include mixins.media-query(small) {
     justify-content: center;
 
     svg {
-      width: 20vw;
-      transform: translateY(32vw);
+      width: 12.15vw;
+      // transform: translateY(32vw);
     }
   }
 
   @include mixins.media-query(medium-up) {
-    width: auto;
-    height: 48.4%;
+    // width: auto;
+    // height: 48.4%;
+    height: auto;
+    flex-basis: 13.5%;
   }
 
   path {

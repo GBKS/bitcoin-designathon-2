@@ -217,23 +217,32 @@ export default {
     }
 
     @include mixins.media-query(small) {
-      min-height: 700px;
+      // min-height: 700px;
       // height: 80dvh;
       padding-top: 30px;
       padding-bottom: 30px;
       box-sizing: border-box;
 
       .letters {
+        padding-top: 30px;
+        padding-bottom: 30px;
         flex-direction: column;
       }
     }
 
     @include mixins.media-query(medium-up) {
       // min-height: 900px;
-      height: 100vh;
+      // min-height: 90vh;
       padding-top: 40px;
       padding-bottom: 40px;
       box-sizing: border-box;
+
+      .letters {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        aspect-ratio: 2.851;
+      }
     }
 
     p {

@@ -228,23 +228,12 @@ export default {
 @use "@/assets/css/mixins.scss";
 
 .banner-title {
-  // position: absolute;
-  // left: 0;
-  // top: 0;
-  // width: 100%;
-  // height: 100%;
   position: relative;
   aspect-ratio: 2.0765;
   display: flex;
   justify-content: center;
-  align-items: center;
-  container-type: size;
-  container-name: aspect-container;
-
-  // display: none;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%, -50%);
+  // container-type: size;
+  // container-name: aspect-container;
 
   svg {
     overflow: visible;
@@ -252,12 +241,12 @@ export default {
     height: 100%;
   }
 
-  @container aspect-container (aspect-ratio <= 2.0765) {
-    svg {
-      width: 100%;
-      height: auto;
-    }
-  }
+  // @container aspect-container (aspect-ratio <= 2.0765) {
+  //   svg {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
 
   @include mixins.media-query(small) {
     svg {
@@ -266,8 +255,10 @@ export default {
   }
 
   @include mixins.media-query(medium-up) {
-    width: auto;
-    height: 100%;
+    align-items: center;
+    flex-basis: 65.8%;
+    flex-shrink: 0;
+    height: auto;
   }
 
   path {
