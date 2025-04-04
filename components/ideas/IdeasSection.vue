@@ -8,7 +8,7 @@
       :color="color"
     />
     <IdeasIdeaList
-      v-if="ideas"
+      v-if="cleanIdeas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
@@ -43,25 +43,29 @@ export default {
     cleanIdeas() {
       const result = []
 
-      let idea
-      for(let i=0; i<this.ideas.length; i++) {
-        idea = this.ideas[i]
+      if(this.ideas) {
+        let idea
+        for(let i=0; i<this.ideas.length; i++) {
+          idea = this.ideas[i]
 
-        if(idea.fields.Name && 
-          idea.fields.Name.length > 0 && 
-          idea.fields.Description && 
-          idea.fields.Description.length > 0 && 
-          idea.fields.Status == 'Visible'
-        ) {
-          result.push(idea)
+          if(idea.fields.Name && 
+            idea.fields.Name.length > 0 && 
+            idea.fields.Description && 
+            idea.fields.Description.length > 0 && 
+            idea.fields.Status == 'Visible'
+          ) {
+            result.push(idea)
+          }
+        }
+
+        if(this.shuffleIdeas) {
+          return this.shuffle(result)
+        } else {
+          return result
         }
       }
 
-      if(this.shuffleIdeas) {
-        return this.shuffle(result)
-      } else {
-        return result
-      }
+      return null
     },
 
     color() {
