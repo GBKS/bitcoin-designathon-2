@@ -10,6 +10,7 @@
       :link="link"
       :label="linkLabel"
       :color="color"
+      :textColor="textColor"
     />
   </div>
 </template>
@@ -22,7 +23,8 @@ export default {
     'description',
     'link',
     'linkLabel',
-    'color'
+    'color',
+    'textColor'
   ]
 
 }
@@ -58,7 +60,7 @@ export default {
     margin-top: 10px;
     text-wrap: balance;
     line-height: 1.6;
-    @include mixins.r('font-size', 18, 20);
+    @include mixins.r('font-size', 18, 22);
 
     a {
       color: var(--front);

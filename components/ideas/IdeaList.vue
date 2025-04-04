@@ -5,6 +5,7 @@
       :index="paginationIndex"
       :pages="paginationPages"
       :color="color"
+      :textColor="textColor"
       @paginate="paginate"
     />
     <div class="wrap">
@@ -15,6 +16,7 @@
         :idea="item"
         :projects="projects"
         :color="color"
+        :textColor="textColor"
       />
     </div>
     <IdeasIdeaListItemOverlay
@@ -23,6 +25,7 @@
       :ideas="ideas"
       :projects="projects"
       :color="color"
+      :textColor="textColor"
       @close="closeOverlay"
     />
   </div>
@@ -35,7 +38,8 @@ export default {
     'palette',
     'ideas',
     'projects',
-    'color'
+    'color',
+    'textColor'
   ],
 
   data() {

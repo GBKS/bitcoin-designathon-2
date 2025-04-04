@@ -35,6 +35,7 @@
             :link="createLink"
             label="Create project"
             :color="color"
+            :textColor="textColor"
             size="small"
             :invert="true"
           />
@@ -52,7 +53,8 @@ export default {
     'palette',
     'ideas',
     'projects',
-    'color'
+    'color',
+    'textColor'
   ],
 
   data() {
