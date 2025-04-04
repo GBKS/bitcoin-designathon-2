@@ -5,14 +5,16 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="color"
+      :color="palette.button.background"
+      :textColor="palette.button.label"
     />
     <IdeasIdeaList
       v-if="cleanIdeas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
-      :color="color"
+      :color="palette.button.background"
+      :textColor="palette.button.label"
     />
   </div>
 </template>

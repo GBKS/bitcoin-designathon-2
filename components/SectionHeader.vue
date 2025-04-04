@@ -10,6 +10,7 @@
       :link="link"
       :label="linkLabel"
       :color="color"
+      :textColor="textColor"
     />
   </div>
 </template>
@@ -22,7 +23,8 @@ export default {
     'description',
     'link',
     'linkLabel',
-    'color'
+    'color',
+    'textColor'
   ]
 
 }
