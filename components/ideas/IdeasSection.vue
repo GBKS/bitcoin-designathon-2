@@ -5,14 +5,16 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="color"
+      :color="palette.button.background"
+      :textColor="palette.button.label"
     />
     <IdeasIdeaList
-      v-if="ideas"
+      v-if="cleanIdeas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"
-      :color="color"
+      :color="palette.button.background"
+      :textColor="palette.button.label"
     />
   </div>
 </template>
@@ -41,27 +43,32 @@ export default {
 
   computed: {
     cleanIdeas() {
-      const result = []
+      let result = null
 
-      let idea
-      for(let i=0; i<this.ideas.length; i++) {
-        idea = this.ideas[i]
+      if(this.ideas) {
+        let idea
+        for(let i=0; i<this.ideas.length; i++) {
+          idea = this.ideas[i]
 
-        if(idea.fields.Name && 
-          idea.fields.Name.length > 0 && 
-          idea.fields.Description && 
-          idea.fields.Description.length > 0 && 
-          idea.fields.Status == 'Visible'
-        ) {
-          result.push(idea)
+          if(idea.fields.Name && 
+            idea.fields.Name.length > 0 && 
+            idea.fields.Description && 
+            idea.fields.Description.length > 0 && 
+            idea.fields.Status == 'Visible'
+          ) {
+            if(!result) {
+              result = []
+            }
+            result.push(idea)
+          }
+        }
+
+        if(result && this.shuffleIdeas) {
+          result = this.shuffle(result)
         }
       }
 
-      if(this.shuffleIdeas) {
-        return this.shuffle(result)
-      } else {
-        return result
-      }
+      return result
     },
 
     color() {

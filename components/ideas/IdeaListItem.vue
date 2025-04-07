@@ -22,6 +22,7 @@
       label="More info"
       size="small"
       :color="color"
+      :textColor="textColor"
       :invert="true"
     />
   </div>
@@ -34,7 +35,8 @@ export default {
     'palette',
     'idea',
     'projects',
-    'color'
+    'color',
+    'textColor'
   ],
 
   data() {

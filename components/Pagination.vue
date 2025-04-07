@@ -4,6 +4,7 @@
       icon="left"
       :disabled="index == 0"
       :color="color"
+      :textColor="textColor"
       size="small"
       @click="left"
     />
@@ -20,6 +21,7 @@
       icon="right"
       :disabled="index >= (pages - 1)"
       :color="color"
+      :textColor="textColor"
       size="small"
       @click="right"
     />
@@ -32,7 +34,8 @@ export default {
   props: [
     'index',
     'pages',
-    'color'
+    'color',
+    'textColor'
   ],
 
   data() {

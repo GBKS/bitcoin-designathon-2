@@ -93,7 +93,7 @@ export default {
     margin: 20px 0 0 0;
     font-weight: 900;
     text-align: center;
-    @include mixins.r('font-size', 18, 24);
+    @include mixins.r('font-size', 21, 24);
 
     a {
       color: var(--front);
@@ -109,7 +109,7 @@ export default {
   p {
     margin: 5px 0 0 0;
     text-align: center;
-    @include mixins.r('font-size', 15, 18);
+    @include mixins.r('font-size', 17, 18);
   }
 }
 

@@ -54,6 +54,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16x16.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
         { rel: 'mask-icon', color: '#f2a900', href: '/assets/safari-pinned-tab.svg' },
+      ],
+      script: [
+        { defer: true, src:"https://info.bitcoin.design/script.js", "data-website-id": "1fbc2d6d-0ffd-44f3-8468-59bb61a248fe" }
       ]
     },
   }

@@ -20,7 +20,6 @@
       :palette="palette"
     />
     <IdeasSection
-      v-if="false"
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
@@ -31,11 +30,9 @@
       :palette="palette"
     />
     <PartnersSection
-      v-if="false"
       :palette="palette"
     />
     <QuestionsSection
-      v-if="false"
       :palette="palette"
     />
     <Footer 
