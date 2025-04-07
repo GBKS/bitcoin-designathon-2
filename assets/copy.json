@@ -4,12 +4,12 @@
   },
   "info": {
     "comingup": {
-      "title": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising another designathon! Imagine a traditional hackathon, but primarily focused on design.",
+      "title": "The <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a> is organising another Designathon! Imagine a traditional hackathon, but primarily focused on design.",
       "description": "Our goal is to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. For updates, join us on <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord</a>, and on <a href=\"nostr:npub13s5mxgws70rpxsug96jfvglggackjrxs2ehypwg0prjaxsek42sqd9l03e\" target=\"_blank\" rel=\"me\">Nostr</a>."
     },
     "complete": {
       "title": "Thank you for participating",
-      "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) had a designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.<br/><br/>It was a blast. Thank you to all participants for your creative energy and hard work. Thank you to all who helped make this event happen, especially our amazing sponsors. Check out the participating projects below."
+      "description": "We (the <a href=\"https://bitcoin.design\" target=\"_blank\" rel=\"me\">Bitcoin Design Community</a>) had a Designathon! Imagine a traditional hackathon, but this time focused only on design. Our goal was to motivate designers and builders to get together and collaboratively explore ideas and concepts in and around the bitcoin ecosystem. We coordinated with the <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Bolt.fun Legends of Lightning tournament</a> and <a href=\"https://2022.tabconf.com/builder-day/\" target=\"_blank\" rel=\"me\">TABConf Builder Day</a>, and chatted in Slack in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">#designathon channel</a>, and on <a href=\"https://twitter.com/bitcoin_design\" target=\"_blank\" rel=\"me\">Twitter</a>.<br/><br/>It was a blast. Thank you to all participants for your creative energy and hard work. Thank you to all who helped make this event happen, especially our amazing sponsors. Check out the participating projects below."
     }
   },
   "sponsors": {
@@ -26,8 +26,8 @@
       },
       {
         "i": "when-and-where",
-        "q": "When and where dies it take place?",
-        "a": "<p>The bitcoin designathon takes place online between May 4 to 18, 2025. <br/><br/>All communications, project setup, news, updates, schedules, mentorship, and everything else happens in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Bitcoin Design Discord</a>, for anyone to hop in and say hi 👋 to other makers, start forming project teams, and discuss ideas. This website is updated as the event progresses.<br/><br/>Workshops and talks are streamed on the <a href=\"https://www.youtube.com/c/BitcoinDesign\" target=\"_blank\" rel=\"me\">Bitcoin Design Youtube Channel</a>, so you can join us live or catch up in your own time!</p>"
+        "q": "When and where does it take place?",
+        "a": "<p>The Bitcoin Designathon takes place online between May 4 to 18, 2025. <br/><br/>All communications, project setup, news, updates, schedules, mentorship, and everything else happens in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Bitcoin Design Discord</a>, for anyone to hop in and say hi 👋 to other makers, start forming project teams, and discuss ideas. This website is updated as the event progresses.<br/><br/>Workshops and talks are streamed on the <a href=\"https://www.youtube.com/c/BitcoinDesign\" target=\"_blank\" rel=\"me\">Bitcoin Design Youtube Channel</a>, so you can join us live or catch up in your own time!</p>"
       },
       {
         "i": "activity",
@@ -35,11 +35,13 @@
         "a": "<p>The first few days are dedicated to ensuring all makers are matched up with projects. You can also choose to work on your project alone, totally up to you! The remainder of the event is free and open for you to explore your project.<br/><br/>Next to that, there are live workshops you can join, such as an intro to Open Design and the Bitcoin UI Kit, research, as well as some technical topics. If you want to host a call or workshop, you can reach out in the <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">#designathon Discord channel</a>.<br/><br/>On the final day makers submit their projects for review and have a chance to present them live to the community.</p>"
       },
       {
+        "hidden": true,
         "i": "help-for-newcomers",
         "q": "This is my first time joining a hackathon, is there help?",
-        "a": "<p>Our first few days of the designathon are dedicated to providing makers with some amazing workshops. We also provide guidance in terms of online tutorials and resources you can use to enjoy your design journey. We also put together a brief <a href=\"https://docs.google.com/document/d/1aoc9Noc9x9N0jj3F1OTWNv6W3wA6v8mXxGNho5XaXR8/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with tips for participation.<br/><br/>This provides some good tools and resources for you to start designing and most importantly having fun! Next to that, our <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord channel</a> is always open for you to post your question and we gladly direct you to any additional help you may need.</p>"
+        "a": "<p>Our first few days of the Designathon are dedicated to providing makers with some amazing workshops. We also provide guidance in terms of online tutorials and resources you can use to enjoy your design journey. We also put together a brief <a href=\"https://docs.google.com/document/d/1aoc9Noc9x9N0jj3F1OTWNv6W3wA6v8mXxGNho5XaXR8/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with tips for participation.<br/><br/>This provides some good tools and resources for you to start designing and most importantly having fun! Next to that, our <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord channel</a> is always open for you to post your question and we gladly direct you to any additional help you may need.</p>"
       },
       {
+        "hidden": true,
         "i": "find-projects",
         "q": "Looking for a project to hack on?",
         "a": "<p>Looking for a project to join? You could jump into our <a href=\"https://discord.gg/K7aQ5PErht\" target=\"_blank\" rel=\"me\">Discord</a> and introduce yourself in our #designathon channel. You can let other makers know who you are, where you were from, what skills, resources, and time you could offer, plus what you are excited to design!<br/><br/>Teams organise amongst themselves. We suggest including a variety of backgrounds and skill sets, which typically creates better results. Some participants can be more design focused, others more technical, or artists, it totally depended on what you are working on.</p>"
@@ -52,14 +54,14 @@
       },
       {
         "i": "ideas",
-        "q": "Is my idea appropriate for the designathon?",
-        "a": "<p>The bitcoin designation is open to anything your mind can imagine. If you have an idea in mind and are wondering if it would be a great fit for the designathon, ask in Discord. Below you’ll find a list of idea categories which may help!<br/><br/>Also keep in mind that you don't necessarily need a new idea, you can also help improve existing projects.</p><ul><li><p>Future tech - how will we use bitcoin a few years from now when lightning, ecash, nostr and other advancements are broadly adopted?</p></li><li><p>Adoption - how can we as a community get the current tech to more people in new, interesting, and useful ways?</p></li><li><p>Inclusion - explore how bitcoin reach more people by improving aspects like accessibility and localization</p></li><li><p>Finance - how can bitcoin be used in finance beyond payments and savings?</p></li><li><p>How can bitcoin wallets enable decentralised identities (see <a href=\"https://bitcoin.design/guide/how-it-works/sign-in-with-bitcoin/\" target=\"_blank\" rel=\"me\">Sign in with bitcoin</a>)</p></li><li><p>Solve design problems or think of new experiences around lightning</p></li><li><p>Explore designs and interaction models around hardware wallets</p></li><li><p>Use cases in your personal context (for your kids, people in your community, inheritance)</p></li><li><p>Art - this one is up to you to define</p></li><li><p>Education - how can we make bitcoin easier to understand and start using for more people around the world?</p></li><li><p>Games - what are some unique playful experiences that can only be built on bitcoin?</p></li></ul><p>If your idea doesn’t fit in these categories, no worries, you can just go for it. As long as it is related to bitcoin in some way, it is all in good order.</p>"
+        "q": "Is my idea appropriate for the Designathon?",
+        "a": "<p>The bitcoin designation is open to anything your mind can imagine. If you have an idea in mind and are wondering if it would be a great fit for the Designathon, ask in Discord. Below you’ll find a list of idea categories which may help!<br/><br/>Also keep in mind that you don't necessarily need a new idea, you can also help improve existing projects.</p><ul><li><p>Future tech - how will we use bitcoin a few years from now when lightning, ecash, nostr and other advancements are broadly adopted?</p></li><li><p>Adoption - how can we as a community get the current tech to more people in new, interesting, and useful ways?</p></li><li><p>Inclusion - explore how bitcoin reach more people by improving aspects like accessibility and localization</p></li><li><p>Finance - how can bitcoin be used in finance beyond payments and savings?</p></li><li><p>How can bitcoin wallets enable decentralised identities (see <a href=\"https://bitcoin.design/guide/how-it-works/sign-in-with-bitcoin/\" target=\"_blank\" rel=\"me\">Sign in with bitcoin</a>)</p></li><li><p>Solve design problems or think of new experiences around lightning</p></li><li><p>Explore designs and interaction models around hardware wallets</p></li><li><p>Use cases in your personal context (for your kids, people in your community, inheritance)</p></li><li><p>Art - this one is up to you to define</p></li><li><p>Education - how can we make bitcoin easier to understand and start using for more people around the world?</p></li><li><p>Games - what are some unique playful experiences that can only be built on bitcoin?</p></li></ul><p>If your idea doesn’t fit in these categories, no worries, you can just go for it. As long as it is related to bitcoin in some way, it is all in good order.</p>"
       }
     ]
   },
   "ideas": {
     "title": "Ideas",
-    "description": "It all starts with ideas. In the time leading up to the designathon, we invite you to submit your ideas. They will serve as inspiration for everyone to form teams and collaborate on during the event.",
+    "description": "It all starts with ideas. In the time leading up to the Designathon, we invite you to submit your ideas. They will serve as inspiration for everyone to form teams and collaborate on during the event.",
     "link": "https://airtable.com/appAR943q3FpYsoDk/pagFdLTNpF51aIXmY/form",
     "linkLabel": "Submit your idea"
   },
@@ -88,7 +90,7 @@
         "image": "bitcoin-2025-hackathon.jpg",
         "retina": "bitcoin-2025-hackathon@2x.jpg",
         "name": "Bitcoin 2025 Hackathon",
-        "description": "Enter your project into this 1.5-month online global tournament and compete for a prize pool of ~$30,000 in bitcoin. Or if you are already part of the hackathon, use the designathon to get design support. April 7 to May 20.",
+        "description": "Enter your project into this 1.5-month online global tournament and compete for a prize pool of ~$30,000 in bitcoin. Or if you are already part of the hackathon, use the Designathon to get design support. April 7 to May 20.",
         "link": "https://b.tc/conference/2025/hackathon"
       },
       {
@@ -102,7 +104,7 @@
   },
   "schedule": {
     "title": "Schedule",
-    "description": "The designathon generally had a loose schedule, with projects deciding their own pace. Important, but still optional, were the kick-off, mid-event check-in, and wrap-up calls.",
+    "description": "The Designathon generally had a loose schedule, with projects deciding their own pace. Important, but still optional, were the kick-off, mid-event check-in, and wrap-up calls.",
     "dates": {
       "2022-10-10": {
         "label": "Monday, Oct 10 <i>/ Day -2</i>"

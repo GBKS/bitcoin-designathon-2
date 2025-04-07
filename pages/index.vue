@@ -33,7 +33,6 @@
       :palette="palette"
     />
     <QuestionsSection
-      v-if="false"
       :palette="palette"
     />
     <Footer 
