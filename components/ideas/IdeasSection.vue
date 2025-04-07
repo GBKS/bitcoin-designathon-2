@@ -43,7 +43,7 @@ export default {
 
   computed: {
     cleanIdeas() {
-      const result = []
+      let result = null
 
       if(this.ideas) {
         let idea
@@ -56,18 +56,19 @@ export default {
             idea.fields.Description.length > 0 && 
             idea.fields.Status == 'Visible'
           ) {
+            if(!result) {
+              result = []
+            }
             result.push(idea)
           }
         }
 
-        if(this.shuffleIdeas) {
-          return this.shuffle(result)
-        } else {
-          return result
+        if(result && this.shuffleIdeas) {
+          result = this.shuffle(result)
         }
       }
 
-      return null
+      return result
     },
 
     color() {

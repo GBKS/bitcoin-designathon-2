@@ -60,7 +60,7 @@ export default {
             if(scrollToSection) {
               const questionsSection = document.getElementById('questions')
               window.scrollTo({
-                yCoord: questionsSection.offsetTop,
+                top: questionsSection.offsetTop,
                 behavior: 'smooth'
               })
             }
