@@ -69,6 +69,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     AIRTABLE_ACCESS_TOKEN: process.env.AIRTABLE_ACCESS_TOKEN,
-    USE_DUMMY_DATA: process.env.USE_DUMMY_DATA
+    USE_DUMMY_DATA: process.env.USE_DUMMY_DATA,
+    public: {}
   }
 })

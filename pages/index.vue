@@ -3,8 +3,6 @@ import dummyIdeas from "~/assets/ideas.json";
 import dummyProjects from "~/assets/projects.json";
 import dummySchedule from "~/assets/schedule.json";
 
-const { AIRTABLE_ACCESS_TOKEN, USE_DUMMY_DATA } = useRuntimeConfig()
-
 /*
 
 Color palettes
@@ -136,8 +134,10 @@ if(process.browser) {
 const { data: dynamicData } = await useAsyncData(
   'airtable',
   async () => {
+    const config = useRuntimeConfig()
+
     console.log('Fetching data...')
-    if (USE_DUMMY_DATA === 'true') {
+    if (config.USE_DUMMY_DATA === 'true') {
       console.log('Using dummy data')
       return {
         ideas: dummyIdeas,
@@ -149,7 +149,7 @@ const { data: dynamicData } = await useAsyncData(
       const baseUrl = 'https://api.airtable.com/v0/appAR943q3FpYsoDk/';
       const options = {
         headers: {
-          Authorization: 'Bearer ' + AIRTABLE_ACCESS_TOKEN,
+          Authorization: `Bearer ${config.AIRTABLE_ACCESS_TOKEN}`
         },
       };
       console.log('L 1')
@@ -192,6 +192,8 @@ const { data: dynamicData } = await useAsyncData(
         };
       }
     }
+  }, {
+    server: true
   }
 );
 
