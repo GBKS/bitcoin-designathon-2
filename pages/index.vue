@@ -136,25 +136,30 @@ if(process.browser) {
 const { data: dynamicData } = await useAsyncData(
   'airtable',
   async () => {
+    console.log('Fetching data...')
     if (USE_DUMMY_DATA === 'true') {
+      console.log('Using dummy data')
       return {
         ideas: dummyIdeas,
         projects: dummyProjects,
         schedule: dummySchedule,
       };
     } else {
+      console.log('Using Airtable data')
       const baseUrl = 'https://api.airtable.com/v0/appAR943q3FpYsoDk/';
       const options = {
         headers: {
           Authorization: 'Bearer ' + AIRTABLE_ACCESS_TOKEN,
         },
       };
+      console.log('L 1')
 
       const ideasUrl = baseUrl + 'Ideas';
       const projectsUrl = baseUrl + 'Projects';
       const scheduleUrl = baseUrl + 'Schedule';
 
       try {
+        console.log('L 2')
         const [ideasResponse, projectsResponse, scheduleResponse] = await Promise.all([
           fetch(ideasUrl, options),
           fetch(projectsUrl, options),
@@ -164,12 +169,14 @@ const { data: dynamicData } = await useAsyncData(
         if (!ideasResponse.ok || !projectsResponse.ok || !scheduleResponse.ok) {
           throw new Error('Failed to fetch data from Airtable');
         }
+        console.log('L 3')
 
         const [ideas, projects, schedule] = await Promise.all([
           ideasResponse.json(),
           projectsResponse.json(),
           scheduleResponse.json(),
         ]);
+        console.log('L 4')
 
         return {
           ideas: ideas.records,
