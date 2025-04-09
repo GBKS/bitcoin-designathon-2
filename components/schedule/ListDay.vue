@@ -6,7 +6,7 @@
     <div class="title">
       <h3
         role="button"
-        :aria-controls="'day-content-'+this.dayId"
+        :aria-controls="'day-content-'+dayId"
         :aria-expanded="expanded"
         @click="toggleExpand"
       >
@@ -16,7 +16,7 @@
       <p class="-count">{{ eventCount }}</p>
     </div>
     <div
-      :id="'day-content-'+this.dayId"
+      :id="'day-content-'+dayId"
       :aria-hidden="expanded ? 'false' : 'true'"
       :style="contentStyle"
     >

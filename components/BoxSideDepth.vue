@@ -1,4 +1,5 @@
 <template>
+  <client-only>
   <div
     :class="classObject"
     :style="styleObject"
@@ -11,6 +12,7 @@
       />    
     </div>
   </div>
+  </client-only>
 </template>
 
 <script>

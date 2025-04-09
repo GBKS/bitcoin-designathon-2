@@ -25,7 +25,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <div class="description" v-html="formattedDescription" />
+          <MDC class="description" :value="description"  />
           <IdeasIdeaListItemProjects
             :idea="idea"
             :projects="projects"
@@ -284,7 +284,4 @@ export default {
   }
 }
 
-
 </style>
-
-

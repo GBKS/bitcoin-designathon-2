@@ -1,170 +1,55 @@
 [
     {
-        "id": "recCkFaSL2QKvzm8R",
-        "createdTime": "2022-10-16T14:10:10.000Z",
-        "fields":
-        {
-            "Name": "Building on Taro, a Taproot-powered protocol for issuing bitcoin assets",
-            "Description": "In this 'Tokens on Bitcoin' workshop, Hannah Rosenberg (Lightning Labs) gives a deep dive into how developers can get started building on Taro and issue assets on this taproot-powered protocol. Organized by [bolt.fun](https://makers.bolt.fun/tournaments/1/overview).\n",
-            "Date": "2022-10-21T15:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[YouTube](https://www.youtube.com/watch?v=JNaryHu2mFc)\n"
-        }
-    },
-    {
-        "id": "recDPHUWsP4D4HGQy",
-        "createdTime": "2022-10-05T09:57:49.000Z",
-        "fields":
-        {
-            "Name": "UX Research Workshop 1",
-            "Description": "This workshop is going to be focused on doing some initial research to help you get your project started. We will share some resources so that your team can do some competitive research to understand what other apps are doing as well as understanding what basic principles makes an interface have good usability. \n",
-            "Date": "2022-10-14T09:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/UXResearchBitcoinDesign)\n"
+        "id": "rec5Dx9WI3nRnLVlD",
+        "createdTime": "2025-04-09T10:41:11.000Z",
+        "fields": {
+            "Name": "Austin Bitcoin Design Club live crit",
+            "Description": "There will be a live design review of 2-3 Designathon projects. Shout-out to the [Austin Bitcoin Design Club](http://abdc.dev).\n",
+            "Date": "2025-05-13T12:00:00.000Z",
+            "Link": "TBD\n"
         }
     },
     {
         "id": "recDw0uI1V51vJnPV",
         "createdTime": "2022-10-05T10:43:29.000Z",
-        "fields":
-        {
+        "fields": {
             "Name": "Prize announcements",
-            "Description": "You'll have a couple of days to rest after all the work during the Designathon and then we'll jump onto a Twitter space and announce who will receive the prizes. Join us there as we wrap up the Designathon.\n",
-            "Date": "2022-10-26T16:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Twitter](https://twitter.com/bitcoin_design)\n"
-        }
-    },
-    {
-        "id": "recEmexrbpxZGCycQ",
-        "createdTime": "2022-10-14T08:37:00.000Z",
-        "fields":
-        {
-            "Name": "⚡️LNDg.xyz UX call",
-            "Description": "An opportunity to gather together online and discuss about the UX approach to adopt and roll out.\n",
-            "Date": "2022-10-14T10:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/lndg.xyz)\n"
-        }
-    },
-    {
-        "id": "recKHaTJviEXoN4KR",
-        "createdTime": "2022-10-16T14:11:49.000Z",
-        "fields":
-        {
-            "Name": "Introduction to Taro, a Taproot-powered protocol for issuing bitcoin assets",
-            "Description": "In this 'Tokens on Bitcoin' workshop, Leo Weese (Lightning Labs) provides an overview of Taro, a new taproot-powered protocol for issuing assets and tokens on the bitcoin blockchain. Organized by [bolt.fun](https://makers.bolt.fun/tournaments/1/overview).\n",
-            "Date": "2022-10-17T17:15:00.000Z",
-            "Status": "Visible",
-            "Link": "[YouTube](https://www.youtube.com/watch?v=BZIrKnJDs3Y)\n"
+            "Description": "You'll have a couple of days to rest after all the work during the Designathon and then we'll jump onto a call and announce who will receive the prizes. Join us there as we wrap up the Designathon.\n",
+            "Date": "2025-05-18T16:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n",
+            "Status": "Visible"
         }
     },
     {
         "id": "recNMGdJeO4l2iYW0",
         "createdTime": "2022-10-05T10:41:13.000Z",
-        "fields":
-        {
+        "fields": {
             "Name": "Kick-off call 2",
-            "Description": "Join us if you can to start the designathon in a video call. If you can't make it, all updates will also be posted in the #designathon channel on Slack.\n",
-            "Date": "2022-10-12T15:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+            "Description": "Join us if you can to start the designathon in a video call. If you can't make it, all updates will also be posted in the #designathon channel on Discord.\n",
+            "Date": "2025-05-04T15:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n",
+            "Status": "Visible"
         }
     },
     {
-        "id": "recO5Gr2A92IqSTWU",
-        "createdTime": "2022-10-05T10:05:25.000Z",
-        "fields":
-        {
-            "Name": "UX Research Workshop 2",
-            "Description": "This workshop we will have you test out your design. We will learn how to create a prototype as well how to test it on users. \n",
-            "Date": "2022-10-21T17:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/UXResearchBitcoinDesign)\n"
+        "id": "recPychIyHHjismLU",
+        "createdTime": "2025-04-09T10:43:57.000Z",
+        "fields": {
+            "Name": "Global Accessibility Awareness Day workshop",
+            "Description": "Join our intro to accessibility workshop, in honor of [Global Accessibility Awareness Day](http://accessibility.day).\n",
+            "Date": "2025-05-15T16:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
         }
     },
     {
         "id": "recWNXfwT1Iu6jzCz",
         "createdTime": "2022-09-21T09:02:06.000Z",
-        "fields":
-        {
+        "fields": {
             "Name": "Kick-off call 1",
-            "Description": "Join us if you can to start the designathon in a video call. If you can't make it, all updates will also be posted in the #designathon channel on Slack.\n",
-            "Date": "2022-10-12T09:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
-        }
-    },
-    {
-        "id": "recWpi73r3ietIDAB",
-        "createdTime": "2022-09-22T12:20:27.000Z",
-        "fields":
-        {
-            "Name": "Community call #39",
-            "Description": "Our regular Bitcoin Design Community Call. Let's use this time to do a mid-event check-in to see what everyone has been doing.\n",
-            "Date": "2022-10-19T17:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/397)\n"
-        }
-    },
-    {
-        "id": "recbGUuGqoJVDyxH3",
-        "createdTime": "2022-09-26T11:41:21.000Z",
-        "fields":
-        {
-            "Name": "Show off your work",
-            "Description": "Let's get together and share what we came up with during the designathon.\n",
-            "Date": "2022-10-23T16:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
-        }
-    },
-    {
-        "id": "reckTy9uYQIpzeYky",
-        "createdTime": "2022-09-26T11:43:41.000Z",
-        "fields":
-        {
-            "Name": "Design & Build, intro to bitcoin wallets on iOS",
-            "Description": "Curious how to use open source code that the community has created to build a bitcoin wallet on iOS? In this workshop Daniel will show you how to use BDK and the Wallet UI Kit in SwiftUI.\n",
-            "Date": "2022-10-14T14:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
-        }
-    },
-    {
-        "id": "reckmmqYIzgi9H2BB",
-        "createdTime": "2022-09-22T12:22:07.000Z",
-        "fields":
-        {
-            "Name": "Community call #38",
-            "Description": "Our regular Bitcoin Design Community Call. This one is leading up to the event, a good time to give an overview, review the schedule, ask questions, and more.\n",
-            "Date": "2022-09-28T17:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Info](https://github.com/BitcoinDesign/Meta/issues/328)\n"
-        }
-    },
-    {
-        "id": "reclFBbTf4gNoR4wE",
-        "createdTime": "2022-09-21T09:02:06.000Z",
-        "fields":
-        {
-            "Name": "Bitcoin UI Kit workshop",
-            "Description": "Introduction to the [Bitcoin UI Kit](https://www.bitcoinuikit.com) and how to use it for quickly mocking-up interfaces for bitcoin applications. Hosted by Christoph.\n",
-            "Date": "2022-10-17T14:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
-        }
-    },
-    {
-        "id": "recxUazjDyIMO9S74",
-        "createdTime": "2022-10-05T10:15:07.000Z",
-        "fields":
-        {
-            "Name": "Pre-kick off call ",
-            "Description": "Want to get to know the other peeps joining on the Designathon? Or maybe you are still trying to figure out team to join or you have an idea you would like to chat to some people about? This is the place to do it. \n",
-            "Date": "2022-10-10T17:00:00.000Z",
-            "Status": "Visible",
-            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n"
+            "Description": "Join us if you can to start the designathon in a video call. If you can't make it, all updates will also be posted in the #designathon channel on Discord.\n",
+            "Date": "2025-05-04T09:00:00.000Z",
+            "Link": "[Jitsi](https://meet.jit.si/bitcoindesign)\n",
+            "Status": "Visible"
         }
     }
 ]

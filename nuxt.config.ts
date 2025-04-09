@@ -3,9 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   target: 'static',
+
   devServer: {
     port: 3210
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -15,10 +17,12 @@ export default defineNuxtConfig({
       }
     }
   },
+
   css: [
     '@/assets/css/normalize.scss',
     '@/assets/css/base.scss'
   ],
+
   app: {
     head: {
       title: 'Bitcoin Designathon 2025',
@@ -59,5 +63,12 @@ export default defineNuxtConfig({
         { defer: true, src:"https://info.bitcoin.design/script.js", "data-website-id": "1fbc2d6d-0ffd-44f3-8468-59bb61a248fe" }
       ]
     },
+  },
+
+  modules: ['@nuxtjs/mdc'],
+
+  runtimeConfig: {
+    AIRTABLE_ACCESS_TOKEN: process.env.AIRTABLE_ACCESS_TOKEN,
+    USE_DUMMY_DATA: process.env.USE_DUMMY_DATA
   }
 })
