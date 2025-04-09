@@ -1,7 +1,7 @@
 <script setup>
-import dummyIdeas from "~/assets/ideas.json";
-import dummyProjects from "~/assets/projects.json";
-import dummySchedule from "~/assets/schedule.json";
+import ideas from "~/assets/data/ideas.json";
+import projects from "~/assets/data/projects.json";
+import schedule from "~/assets/data/schedule.json";
 
 /*
 
@@ -131,6 +131,7 @@ if(process.browser) {
   prefersHighContrast = window.matchMedia('(prefers-contrast: more)').matches
 }
 
+/*
 const { data: dynamicData } = await useAsyncData(
   'airtable',
   async () => {
@@ -204,6 +205,7 @@ const { data: dynamicData } = await useAsyncData(
 const ideas = computed(() => dynamicData.value?.ideas || []);
 const projects = computed(() => dynamicData.value?.projects || []);
 const schedule = computed(() => dynamicData.value?.schedule || []);
+*/
 
 onMounted(() => {
   window.addEventListener('resize', onResize)

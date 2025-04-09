@@ -71,5 +71,27 @@ export default defineNuxtConfig({
     AIRTABLE_ACCESS_TOKEN: process.env.AIRTABLE_ACCESS_TOKEN,
     USE_DUMMY_DATA: process.env.USE_DUMMY_DATA,
     public: {}
+  },
+
+  hooks: {
+    async 'build:before'() {
+      const { $fetch } = await import('ofetch')
+      const { writeFileSync } = await import('fs')
+
+      const ideas = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Ideas', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/ideas.json', JSON.stringify(ideas.records))
+
+      const projects = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Projects', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/projects.json', JSON.stringify(projects.records))
+
+      const schedule = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Schedule', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/schedule.json', JSON.stringify(schedule.records))
+    }
   }
 })
