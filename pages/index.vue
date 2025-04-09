@@ -146,17 +146,21 @@ const { data: dynamicData } = await useAsyncData(
       };
     } else {
       console.log('Using Airtable data')
-      const baseUrl = 'https://api.airtable.com/v0/appAR943q3FpYsoDk/';
-      const options = {
-        headers: {
-          Authorization: `Bearer ${config.AIRTABLE_ACCESS_TOKEN}`
-        },
-      };
-      console.log('L 1')
+      // const baseUrl = 'https://api.airtable.com/v0/appAR943q3FpYsoDk/';
+      // const options = {
+      //   headers: {
+      //     Authorization: `Bearer ${config.AIRTABLE_ACCESS_TOKEN}`
+      //   },
+      // };
+      // console.log('L 1')
 
-      const ideasUrl = baseUrl + 'Ideas';
-      const projectsUrl = baseUrl + 'Projects';
-      const scheduleUrl = baseUrl + 'Schedule';
+      // const ideasUrl = baseUrl + 'Ideas';
+      // const projectsUrl = baseUrl + 'Projects';
+      // const scheduleUrl = baseUrl + 'Schedule';
+
+      const ideasUrl = '/api/ideas';
+      const projectsUrl = '/api/projects';
+      const scheduleUrl = '/api/schedule';
 
       try {
         console.log('L 2')
