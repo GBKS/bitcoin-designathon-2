@@ -81,7 +81,7 @@ const sponsorSourceSet = computed(() => {
   align-items: stretch;
   justify-content: stretch;
   flex-grow: 1;
-  max-width: 450px;
+  max-width: 325px;
   transition: all 250ms animations.$ease;
   box-sizing: border-box;
   background-color: white;
@@ -157,6 +157,8 @@ const sponsorSourceSet = computed(() => {
 
   @include mixins.media-query(large) {
     flex-basis: 325px;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 }
 

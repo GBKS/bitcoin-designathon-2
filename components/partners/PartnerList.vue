@@ -32,6 +32,7 @@ export default {
 
   @include mixins.media-query(small) {
     flex-direction: column;
+    gap: 60px;
   }
 
   @include mixins.media-query(medium-up) {

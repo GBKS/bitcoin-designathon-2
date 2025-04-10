@@ -1,3 +1,13 @@
+<script setup>
+
+const props = defineProps([
+  'sponsors',
+  'palette',
+  'color'
+])
+
+</script>
+
 <template>
   <div class="sponsor-list">
     <PrizesSponsorListItem
@@ -9,32 +19,6 @@
     />
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'sponsors',
-    'palette',
-    'color'
-  ],
-
-  data() {
-    return {
-
-    }
-  },
-
-  computed: {
-
-  },
-
-  methods: {
-
-  }
-
-}
-</script>
 
 <style lang="scss" scoped>
 
@@ -69,4 +53,3 @@ export default {
 }
 
 </style>
-
