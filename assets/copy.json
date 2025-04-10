@@ -153,7 +153,7 @@
   },
   "prizes": {
     "title": "Prizes",
-    "description": "Major thanks to our awesome sponsors for making these prizes possible. To learn more about how they were awarded, see the <a href=\"#questions\">FAQ</a>&nbsp;below.",
+    "description": "Major thanks to our amazing sponsors for making these prizes possible. To learn more about how they were awarded, see the <a href=\"#questions\">FAQ</a> below. <a href=\"https://docs.google.com/document/d/1PMUzv_xmAwKp7AHHtGrsoKUAb84PtQvjKw_O33wkbnE/edit?usp=sharing\" target=\"_blank\">Interested in sponsoring?</a>",
     "prizes": [
       {
         "name": "1",
@@ -174,51 +174,47 @@
     ],
     "sponsors": [
       {
-        "image": "peak-shift.svg",
-        "width": 223,
-        "height": 55,
-        "name": "Peak Shift",
-        "description": "Peak Shift, design agency and huge supporter of bitcoin, lightning, and this&nbsp;event.",
-        "url": "https://peakshift.com/"
+        "title": "Best Overall",
+        "description": "The first prize for the best overall effort and outcome.",
+        "image": "overall",
+        "prize": "Prize: 5,000,000 sats",
+        "sponsor": {
+          "image": "bitcoin-design",
+          "name": "Bitcoin Design Foundation",
+          "url": "http://bitcoindesignfoundation.org"
+        }
       },
       {
-        "image": "breez.svg",
-        "width": 155,
-        "height": 55,
-        "name": "Breez",
-        "description": "Breez is a versatile wallet and entry point into the lightning&nbsp;economy. ",
-        "url": "https://breez.technology/"
+        "title": "Accessibility",
+        "description": "Best effort at improving accessibility of an open-source bitcoin project.",
+        "image": "accessibility",
+        "prize": "Prize: TBD",
+        "sponsor": {
+          "image": "looking",
+          "name": "Looking for a sponsor"
+        }
       },
       {
-        "image": "shift-crypto.svg",
-        "width": 123,
-        "height": 30,
-        "name": "Shift Crypto",
-        "description": "Manufacturer of hardware wallets. Authentic, minimalist, outside-the-box.",
-        "url": "https://shiftcrypto.ch/"
+        "title": "Open Design",
+        "description": "Best use of open-source design tools and working in public.",
+        "image": "open-design",
+        "prize": "Prize: Penpot swag",
+        "sponsor": {
+          "image": "penpot",
+          "name": "Penpot",
+          "url": "https://penpot.com/"
+        }
       },
       {
-        "image": "six-and-lemon.svg",
-        "width": 215,
-        "height": 44,
-        "name": "Six & Lemon",
-        "description": "Rep the bitcoin brand with Six and Lemon’s custom designed jumpers and&nbsp;t-shirts.",
-        "url": "https://sixandlemon.com/"
-      },
-      {
-        "image": "lightning-store.svg",
-        "width": 240,
-        "height": 42,
-        "name": "Lightning Store",
-        "description": "Obscure #Bitcoin pop cult/punk mashups for&nbsp;sale.",
-        "url": "https://lightning.store/"
-      },
-      {
-        "image": "mystery.svg",
-        "width": 103,
-        "height": 42,
-        "name": "*****",
-        "description": "Mystery sponsors. Who could they&nbsp;be?"
+        "title": "Ecash notes",
+        "description": "Best design for Ecash paper note templates.",
+        "image": "ecash-notes",
+        "prize": "Prize: 300,000 sats",
+        "sponsor": {
+          "image": "opencash",
+          "name": "Gandlaf and OpenCash",
+          "url": "http://opencash.dev"
+        }
       }
     ]
   }

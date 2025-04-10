@@ -1,21 +1,21 @@
 <template>
   <div class="prize-visuals-two">
     <img
-      :src="require(`~/assets/images/prizes/jumper.png`)"
+      src="/assets/images/prizes/jumper.png"
       :srcset="jumperRetina"
       width="101"
       height="101"
       alt="Jumper by Six & Lemon"
     />
     <img
-      :src="require(`~/assets/images/prizes/bitcoin.png`)"
+      src="/assets/images/prizes/bitcoin.png"
       :srcset="bitcoinRetina"
       width="176"
       height="109"
       alt="0.025 bitcoin"
     />
     <img
-      :src="require(`~/assets/images/prizes/shirt.png`)"
+      src="/assets/images/prizes/shirt.png"
       :srcset="shirtRetina"
       width="101"
       height="101"
@@ -112,15 +112,15 @@ export default {
 
   computed: {
     bitcoinRetina() {
-      return require(`~/assets/images/prizes/bitcoin.png`)+' 1x, '+require(`~/assets/images/prizes/bitcoin@2x.png`)+' 2x'
+      return '/assets/images/prizes/bitcoin.png 1x, /assets/images/prizes/bitcoin@2x.png 2x'
     },
 
     shirtRetina() {
-      return require(`~/assets/images/prizes/shirt.png`)+' 1x, '+require(`~/assets/images/prizes/shirt@2x.png`)+' 2x'
+      return '/assets/images/prizes/shirt.png 1x, /assets/images/prizes/shirt@2x.png 2x'
     },
 
     jumperRetina() {
-      return require(`~/assets/images/prizes/jumper.png`)+' 1x, '+require(`~/assets/images/prizes/jumper@2x.png`)+' 2x'
+      return '/assets/images/prizes/jumper.png 1x, /assets/images/prizes/jumper@2x.png 2x'
     }
   }
 

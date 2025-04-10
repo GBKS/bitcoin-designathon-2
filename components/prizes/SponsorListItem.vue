@@ -1,56 +1,72 @@
-<template>
-  <div :class="classObject">
-    <h3>
-      <a
-        v-if="sponsor.url"
-        :href="sponsor.url"
-        target="_blank"
-        rel="nofollow noindex"
-      >
-        <img
-          :src="require(`~/assets/images/prizes/${sponsor.image}`)"
-          :width="sponsor.width"
-          :height="sponsor.height"
-          :alt="sponsor.name"
-          loading="lazy"
-        >
-      </a>
-      <img
-        v-else
-        :src="require(`~/assets/images/prizes/${sponsor.image}`)"
-        :width="sponsor.width"
-        :height="sponsor.height"
-        :alt="sponsor.name"
-        loading="lazy"
-      >
-    </h3>
-    <p v-html="sponsor.description" />
-  </div>
-</template>
+<script setup>
 
-<script>
-export default {
+const props = defineProps([
+  'palette',
+  'info',
+  'color'
+])
 
-  props: [
-    'palette',
-    'sponsor',
-    'color'
-  ],
 
-  computed: {
-    classObject() {
-      const c = ['sponsor-list-item']
+const classObject = computed(() => {
+  const c = ['sponsor-list-item']
 
-      if(this.sponsor.url) {
-        c.push('-link')
-      }
-
-      return c.join(' ')
-    }
+  if(props.info.url) {
+    c.push('-link')
   }
 
-}
+  return c.join(' ')
+})
+
+const imageSourceSet = computed(() => {
+  return `/images/prizes/${props.info.image}.jpg 1x, /images/prizes/${props.info.image}@2x.jpg 2x`
+})
+
+const sponsorSourceSet = computed(() => {
+  return `/images/sponsors/${props.info.sponsor.image}.png 1x, /images/sponsors/${props.info.sponsor.image}@2x.png 2x`
+})
 </script>
+
+<template>
+  <div :class="classObject">
+    <img
+      :src="`/images/prizes/${info.image}.jpg`"
+      :srcset="imageSourceSet"
+      width="300"
+      height="225"
+      :alt="info.title"
+      loading="lazy"
+    >
+    <div class="info">
+      <h3>{{ info.title }}</h3>
+      <p class="-description" v-html="info.description" />
+      <p class="-prize" v-html="info.prize" />
+      <div class="sponsor">
+        <img
+          :src="`/images/sponsors/${info.sponsor.image}.png`"
+          :srcset="sponsorSourceSet"
+          width="50"
+          height="50"
+          :alt="info.sponsor.name"
+          loading="lazy"
+        >
+        <div class="right">
+          <p>Sponsor</p>
+          <h5>
+            <a
+              v-if="info.sponsor.url"
+              :href="info.sponsor.url"
+              target="_blank"
+              rel="nofollow noindex"
+            >{{ info.sponsor.name }}</a>
+            <template v-else>
+              {{ info.sponsor.name }}
+            </template>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss">
 
@@ -62,56 +78,74 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  justify-content: stretch;
   flex-grow: 1;
+  max-width: 450px;
   transition: all 250ms animations.$ease;
   box-sizing: border-box;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: -8px 8px 0 rgba(black, 0.07);
+  border: 2px solid black;
 
-  h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    // @include mixins.r('font-size', 22, 27);
-    // font-weight: 900;
-    line-height: 0;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 15px;
+  > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
     padding: 20px 20px 20px 20px;
-    box-shadow: -8px 8px 0 rgba(black, 0.07);
-    transition: all 150ms animations.$ease;
 
-    a {
-      color: black;
-      text-decoration: none;
-    }
-  }
-
-  p {
-    margin: 10px 0 0 0;
-    text-align: center;
-    @include mixins.r('font-size', 15, 18);
-    // color: rgba(black, 0.75);
-
-    a {
-      color: black;
-    }
-  }
-
-  > a {
-    margin-top: 20px;
-  }
-
-  &.-link {
     h3 {
-      &:hover {
-        transform: translate(-3px, 5px);
-        box-shadow: -4px 4px 0 rgba(black, 0.15);
+      font-family: 'MPlusRounded', sans-serif;
+      font-weight: 900;
+      color: black;
+      @include mixins.r('font-size', 22, 30);
+    }
 
-        a {
-          color: var(--palette-0);
-          cursor: pointer;
+    > p {
+      color: rgba(black, 0.75);
+
+      &.-description {
+        margin-top: 5px;
+        @include mixins.r('font-size', 15, 19);
+      }
+
+      &.-prize {
+        margin-top: 15px;
+        @include mixins.r('font-size', 15, 17);
+      }
+    }
+
+    .sponsor {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        border-radius: 15px;
+      }
+
+      .right {
+        p {
+          color: rgba(black, 0.75);
+          @include mixins.r('font-size', 15, 17);
+        }
+
+        h5 {
+          color: rgba(black, 1);
+          @include mixins.r('font-size', 15, 19);
+
+          a {
+            text-decoration: none;
+            color: rgba(black, 1);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
@@ -122,7 +156,7 @@ export default {
   }
 
   @include mixins.media-query(large) {
-    flex-basis: 26%;
+    flex-basis: 325px;
   }
 }
 

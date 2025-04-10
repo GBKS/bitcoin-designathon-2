@@ -131,82 +131,6 @@ if(process.browser) {
   prefersHighContrast = window.matchMedia('(prefers-contrast: more)').matches
 }
 
-/*
-const { data: dynamicData } = await useAsyncData(
-  'airtable',
-  async () => {
-    const config = useRuntimeConfig()
-
-    console.log('Fetching data...')
-    if (config.USE_DUMMY_DATA === 'true') {
-      console.log('Using dummy data')
-      return {
-        ideas: dummyIdeas,
-        projects: dummyProjects,
-        schedule: dummySchedule,
-      };
-    } else {
-      console.log('Using Airtable data')
-      // const baseUrl = 'https://api.airtable.com/v0/appAR943q3FpYsoDk/';
-      // const options = {
-      //   headers: {
-      //     Authorization: `Bearer ${config.AIRTABLE_ACCESS_TOKEN}`
-      //   },
-      // };
-      // console.log('L 1')
-
-      // const ideasUrl = baseUrl + 'Ideas';
-      // const projectsUrl = baseUrl + 'Projects';
-      // const scheduleUrl = baseUrl + 'Schedule';
-
-      const ideasUrl = '/api/ideas';
-      const projectsUrl = '/api/projects';
-      const scheduleUrl = '/api/schedule';
-
-      try {
-        console.log('L 2')
-        const [ideasResponse, projectsResponse, scheduleResponse] = await Promise.all([
-          fetch(ideasUrl, options),
-          fetch(projectsUrl, options),
-          fetch(scheduleUrl, options),
-        ]);
-
-        if (!ideasResponse.ok || !projectsResponse.ok || !scheduleResponse.ok) {
-          throw new Error('Failed to fetch data from Airtable');
-        }
-        console.log('L 3')
-
-        const [ideas, projects, schedule] = await Promise.all([
-          ideasResponse.json(),
-          projectsResponse.json(),
-          scheduleResponse.json(),
-        ]);
-        console.log('L 4')
-
-        return {
-          ideas: ideas.records,
-          projects: projects.records,
-          schedule: schedule.records,
-        };
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        return {
-          ideas: [],
-          projects: [],
-          schedule: [],
-        };
-      }
-    }
-  }, {
-    server: true
-  }
-);
-
-const ideas = computed(() => dynamicData.value?.ideas || []);
-const projects = computed(() => dynamicData.value?.projects || []);
-const schedule = computed(() => dynamicData.value?.schedule || []);
-*/
-
 onMounted(() => {
   window.addEventListener('resize', onResize)
 
@@ -235,10 +159,6 @@ const classObject = computed(() => {
 
   c.push('-palette-'+paletteIndex.value)
 
-  // console.log('classObject', this.paletteIndex)
-  // console.log('palette', this.palette)
-  // console.log('c', c)
-
   return c.join(' ')
 })
 
@@ -248,10 +168,6 @@ const styleObject = computed(() => {
   if(isMounted && process.browser && palette.value.background) {
     s.backgroundColor = palette.value.background
   }
-
-  // console.log('styleObject', this.paletteIndex)
-  // console.log('palette', this.palette)
-  // console.log('s', s, JSON.stringify(s))
 
   return s
 })
@@ -323,7 +239,6 @@ function onResize() {
       :projects="projects"
     />
     <PrizesSection 
-      v-if="false"
       :palette="palette"
     />
     <IdeasSection

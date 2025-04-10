@@ -1,28 +1,28 @@
 <template>
   <div class="prize-visuals-four">
     <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
+      src="/assets/images/prizes/gift-card.png"
       :srcset="giftCardRetina"
       width="101"
       height="101"
       alt="Lightning Store gift card"
     />
     <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
+      src="/assets/images/prizes/gift-card.png"
       :srcset="giftCardRetina"
       width="101"
       height="101"
       alt="Lightning Store gift card"
     />
     <img
-      :src="require(`~/assets/images/prizes/shirt-2.png`)"
+      src="/assets/images/prizes/shirt-2.png"
       :srcset="shirtRetina"
       width="101"
       height="101"
       alt="Shirt by Six & Lemon"
     />
     <img
-      :src="require(`~/assets/images/prizes/shirt-2.png`)"
+      src="/assets/images/prizes/shirt-2.png"
       :srcset="shirtRetina"
       width="101"
       height="101"
@@ -150,11 +150,11 @@ export default {
 
   computed: {
     giftCardRetina() {
-      return require(`~/assets/images/prizes/gift-card.png`)+' 1x, '+require(`~/assets/images/prizes/gift-card@2x.png`)+' 2x'
+      return '/assets/images/prizes/gift-card.png 1x, /assets/images/prizes/gift-card@2x.png 2x'
     },
 
     shirtRetina() {
-      return require(`~/assets/images/prizes/shirt-2.png`)+' 1x, '+require(`~/assets/images/prizes/shirt-2@2x.png`)+' 2x'
+      return '/assets/images/prizes/shirt-2.png 1x, /assets/images/prizes/shirt-2@2x.png 2x'
     }
   }
 
