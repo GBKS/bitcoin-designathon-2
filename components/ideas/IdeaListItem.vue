@@ -97,7 +97,7 @@ function unhover() {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 20px 40px;
+  padding: 20px 20px 20px 20px;
   box-shadow: -8px 8px 0 rgba(black, 0.07);
   flex-grow: 1;
   transition: all 250ms animations.$ease;
