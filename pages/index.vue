@@ -144,9 +144,9 @@ onMounted(() => {
 
   updateHighContrast()
 
-  // console.log('ideas', ideas.value)
-  // console.log('projects', projects.value)
-  // console.log('schedule', schedule.value)
+  console.log('ideas', ideas)
+  // console.log('projects', projects)
+  // console.log('schedule', schedule)
 })
 
 const classObject = computed(() => {

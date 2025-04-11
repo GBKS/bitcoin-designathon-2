@@ -86,7 +86,7 @@ const sponsorSourceSet = computed(() => {
   box-sizing: border-box;
   background-color: white;
   border-radius: 25px;
-  box-shadow: -8px 8px 0 rgba(black, 0.07);
+  box-shadow: 8px 8px 0 rgba(black, 0.07);
   border: 2px solid black;
 
   > img {

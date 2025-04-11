@@ -92,5 +92,11 @@ export default defineNuxtConfig({
       })
       writeFileSync('assets/data/schedule.json', JSON.stringify(schedule.records))
     }
+  },
+
+  mdc: {
+    headings: {
+      anchorLinks: false
+    }
   }
 })

@@ -9,7 +9,7 @@
       :textColor="palette.button.label"
     />
     <IdeasIdeaList
-      v-if="false && cleanIdeas"
+      v-if="cleanIdeas"
       :ideas="cleanIdeas"
       :projects="projects"
       :palette="palette"

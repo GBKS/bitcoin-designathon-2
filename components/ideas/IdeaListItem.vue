@@ -61,6 +61,7 @@ function unhover() {
     @mouseleave="unhover"
   >
     <BoxSideDepth
+      :text="name"
       :color="color"
       :hovering="hovering"
     />
