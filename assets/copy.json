@@ -179,12 +179,7 @@
         "title": "Open Design",
         "description": "Best use of open-source design tools and working in public.",
         "image": "open-design",
-        "prize": "Prize: Penpot swag",
-        "sponsor": {
-          "image": "penpot",
-          "name": "Penpot",
-          "url": "https://penpot.com/"
-        }
+        "prize": "Prize: Penpot swag"
       },
       {
         "title": "Ecash notes",

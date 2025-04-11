@@ -40,7 +40,7 @@ const sponsorSourceSet = computed(() => {
       <h3>{{ info.title }}</h3>
       <p class="-description" v-html="info.description" />
       <p class="-prize" v-html="info.prize" />
-      <div class="sponsor">
+      <div class="sponsor" v-if="info.sponsor">
         <img
           :src="`/images/sponsors/${info.sponsor.image}.png`"
           :srcset="sponsorSourceSet"
