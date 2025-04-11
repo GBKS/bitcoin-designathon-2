@@ -1,3 +1,57 @@
+<script setup>
+
+const props = defineProps([
+  'palette',
+  'idea',
+  'projects',
+  'color',
+  'textColor'
+])
+
+const hovering = ref(false)
+
+const elementId = computed(() => {
+  return 'idea-summary-'+props.idea.id
+})
+
+const name = computed(() => {
+  return props.idea.fields.Name
+})
+
+const description = computed(() => {
+  return props.idea.fields.Description
+})
+
+const shortenedDescription = computed(() => {
+  let result = props.idea.fields.Description
+
+  // Strip Markdown
+  result = result.split('**').join('')
+  result = result.split('\\-').join('')
+
+  if(result.length > 100) {
+    result = result.substr(0, 98) //  <b>more</b>
+
+    const lastIndex = result.lastIndexOf(' ')
+    if(lastIndex > result.length - 10) {
+      result = result.substr(0, lastIndex)
+    }
+
+    result += '...'
+  }
+
+  return result
+})
+
+function hover() {
+  hovering.value = true
+}
+
+function unhover() {
+  hovering.value = false
+}
+</script>
+
 <template>
   <div
     :id="elementId"
@@ -7,10 +61,11 @@
     @mouseleave="unhover"
   >
     <BoxSideDepth
+      :text="name"
       :color="color"
       :hovering="hovering"
     />
-    <h3><a :href="'#project-'+this.idea.id">{{ name }}</a></h3>
+    <h3><a :href="'#project-'+idea.id">{{ name }}</a></h3>
     <p v-if="description" v-html="shortenedDescription" />
     <IdeasIdeaListItemProjects
       :idea="idea"
@@ -18,7 +73,7 @@
       align="center"
     />
     <SuperButton
-      :link="'#idea-'+this.idea.id"
+      :link="'#idea-'+idea.id"
       label="More info"
       size="small"
       :color="color"
@@ -27,71 +82,6 @@
     />
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'palette',
-    'idea',
-    'projects',
-    'color',
-    'textColor'
-  ],
-
-  data() {
-    return {
-      hovering: false
-    }
-  },
-
-  computed: {
-    elementId() {
-      return 'idea-summary-'+this.idea.id
-    },
-
-    name() {
-      return this.idea.fields.Name
-    },
-
-    description() {
-      return this.idea.fields.Description
-    },
-
-    shortenedDescription() {
-      let result = this.idea.fields.Description
-
-      // Strip Markdown
-      result = result.split('**').join('')
-      result = result.split('\\-').join('')
-
-      if(result.length > 100) {
-        result = result.substr(0, 98) //  <b>more</b>
-
-        const lastIndex = result.lastIndexOf(' ')
-        if(lastIndex > result.length - 10) {
-          result = result.substr(0, lastIndex)
-        }
-
-        result += '...'
-      }
-
-      return result
-    }
-  },
-
-  methods: {
-    hover() {
-      this.hovering = true
-    },
-
-    unhover() {
-      this.hovering = false
-    }
-  }
-
-}
-</script>
 
 <style lang="scss">
 
@@ -107,7 +97,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 20px 40px;
+  padding: 20px 20px 20px 20px;
   box-shadow: -8px 8px 0 rgba(black, 0.07);
   flex-grow: 1;
   transition: all 250ms animations.$ease;
@@ -160,5 +150,3 @@ export default {
 }
 
 </style>
-
-

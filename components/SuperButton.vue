@@ -42,11 +42,11 @@ export default {
       const s = {}
 
       if(this.color) {
-        s.backgroundColor = this.color
+        s.backgroundColor = this.invert ? this.textColor : this.color
       }
 
       if(this.textColor) {
-        s.color = this.textColor || null
+        s.color = this.invert ? this.color : this.textColor
       }
 
       return s
@@ -112,7 +112,10 @@ export default {
 
   &.-small {
     border-width: 1px;
-    @include mixins.r('font-size', 15, 35);
+    font-family: 'MPlusRounded', sans-serif;
+    text-transform: none;
+    // font-weight: 400;
+    @include mixins.r('font-size', 15, 19);
 
     &:before {
       left: -7px;
@@ -125,6 +128,8 @@ export default {
 
   &.-invert {
     border-color: black;
+    color: var(--front);
+    background-color: var(--back);
 
     &:before {
       border-color: rgba(black, 0.2);

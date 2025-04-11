@@ -13,11 +13,11 @@
       </h3>
       <p v-if="false" v-html="formattedDate" />
       <client-only>
-        <p v-if="description" v-html="formattedDescription" />
+        <MDC :value="description" tag="p" />
       </client-only>
     </div>
     <client-only>
-      <div class="link" v-html="link" />
+      <MDC class="link" :value="link" tag="div" />
     </client-only>
   </div>
 </template>
@@ -41,10 +41,6 @@ export default {
 
     description() {
       return this.event.fields.Description
-    },
-
-    formattedDescription() {
-      return this.$md.render(this.description)
     },
 
     isLive() {
@@ -73,7 +69,7 @@ export default {
     },
 
     link() {
-      return this.$md.render(this.event.fields.Link)
+      return this.event.fields.Link
     }
   }
 

@@ -1,28 +1,28 @@
 <template>
   <div class="prize-visuals-three">
     <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
+      src="/assets/images/prizes/gift-card.png"
       :srcset="giftCardRetina"
       width="101"
       height="101"
       alt="Lightning Store gift card"
     />
     <img
-      :src="require(`~/assets/images/prizes/gift-card.png`)"
+      src="/assets/images/prizes/gift-card.png"
       :srcset="giftCardRetina"
       width="101"
       height="101"
       alt="Lightning Store gift card"
     />
     <img
-      :src="require(`~/assets/images/prizes/bitbox.png`)"
+      src="/assets/images/prizes/bitbox.png"
       :srcset="bitboxRetina"
       width="100"
       height="100"
       alt="BitBox02"
     />
     <img
-      :src="require(`~/assets/images/prizes/jumper-2.png`)"
+      src="/assets/images/prizes/jumper-2.png"
       :srcset="jumperRetina"
       width="101"
       height="101"
@@ -127,15 +127,15 @@ export default {
 
   computed: {
     giftCardRetina() {
-      return require(`~/assets/images/prizes/gift-card.png`)+' 1x, '+require(`~/assets/images/prizes/gift-card@2x.png`)+' 2x'
+      return '/assets/images/prizes/gift-card.png 1x, /assets/images/prizes/gift-card@2x.png 2x'
     },
 
     bitboxRetina() {
-      return require(`~/assets/images/prizes/bitbox.png`)+' 1x, '+require(`~/assets/images/prizes/bitbox@2x.png`)+' 2x'
+      return '/assets/images/prizes/bitbox.png 1x, /assets/images/prizes/bitbox@2x.png 2x'
     },
 
     jumperRetina() {
-      return require(`~/assets/images/prizes/jumper-2.png`)+' 1x, '+require(`~/assets/images/prizes/jumper-2@2x.png`)+' 2x'
+      return '/assets/images/prizes/jumper-2.png 1x, /assets/images/prizes/jumper-2@2x.png 2x'
     }
   }
 

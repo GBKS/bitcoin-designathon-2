@@ -3,9 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   target: 'static',
+
   devServer: {
     port: 3210
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -15,10 +17,12 @@ export default defineNuxtConfig({
       }
     }
   },
+
   css: [
     '@/assets/css/normalize.scss',
     '@/assets/css/base.scss'
   ],
+
   app: {
     head: {
       title: 'Bitcoin Designathon 2025',
@@ -59,5 +63,40 @@ export default defineNuxtConfig({
         { defer: true, src:"https://info.bitcoin.design/script.js", "data-website-id": "1fbc2d6d-0ffd-44f3-8468-59bb61a248fe" }
       ]
     },
+  },
+
+  modules: ['@nuxtjs/mdc'],
+
+  runtimeConfig: {
+    USE_DUMMY_DATA: process.env.USE_DUMMY_DATA,
+    public: {}
+  },
+
+  hooks: {
+    async 'build:before'() {
+      const { $fetch } = await import('ofetch')
+      const { writeFileSync } = await import('fs')
+
+      const ideas = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Ideas', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/ideas.json', JSON.stringify(ideas.records))
+
+      const projects = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Projects', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/projects.json', JSON.stringify(projects.records))
+
+      const schedule = await $fetch('https://api.airtable.com/v0/appAR943q3FpYsoDk/Schedule', {
+        headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
+      })
+      writeFileSync('assets/data/schedule.json', JSON.stringify(schedule.records))
+    }
+  },
+
+  mdc: {
+    headings: {
+      anchorLinks: false
+    }
   }
 })

@@ -6,6 +6,7 @@
       :color="color"
     />
     <PrizesPrizeList
+      v-if="false"
       :prizes="copy.prizes"
       :palette="palette"
       :color="color"

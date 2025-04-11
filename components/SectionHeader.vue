@@ -1,6 +1,22 @@
+<script setup>
+
+const props = defineProps([
+  'title',
+  'description',
+  'link',
+  'linkLabel',
+  'color',
+  'textColor',
+  'palette'
+])
+
+</script>
+
 <template>
   <div class="section-header">
-    <h1 v-html="title" />
+    <h1
+      v-html="title"
+    />
     <p 
       v-if="description" 
       v-html="description"
@@ -14,21 +30,6 @@
     />
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'title',
-    'description',
-    'link',
-    'linkLabel',
-    'color',
-    'textColor'
-  ]
-
-}
-</script>
 
 <style lang="scss">
 
@@ -60,6 +61,7 @@ export default {
     margin-top: 10px;
     text-wrap: balance;
     line-height: 1.6;
+    color: rgba(var(--frontRGB), 0.75);
     @include mixins.r('font-size', 18, 22);
 
     a {

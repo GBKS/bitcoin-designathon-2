@@ -25,7 +25,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <div class="description" v-html="formattedDescription" />
+          <MDC class="description" :value="description"  />
           <IdeasIdeaListItemProjects
             :idea="idea"
             :projects="projects"
@@ -215,7 +215,7 @@ export default {
         cursor: pointer;
       }
 
-      h3 {
+      > h3 {
         font-weight: 900;
         color: black;
         padding-right: 25px;
@@ -226,10 +226,25 @@ export default {
         overflow-y: scroll;
         padding-right: 20px;
 
+        > h2 {
+          font-weight: 900;
+          color: black;
+          padding-right: 25px;
+          @include mixins.r('font-size', 22, 24);
+        }
+
+
+        > h3 {
+          font-weight: 900;
+          color: black;
+          padding-right: 25px;
+          @include mixins.r('font-size', 19, 19);
+        }
+
         p {
           margin-top: 10px;
           color: rgba(black, 0.75);
-          @include mixins.r('font-size', 16, 21);
+          @include mixins.r('font-size', 16, 19);
 
           strong {
             font-weight: 600;
@@ -240,8 +255,17 @@ export default {
             color: black;
           }
 
-          & + p {
+          & + p,
+          & + h2,
+          & + h3 {
             margin-top: 20px;
+          }
+        }
+
+        ul, ol {
+          li {
+            color: rgba(black, 0.75);
+            @include mixins.r('font-size', 16, 19);
           }
         }
 
@@ -284,7 +308,4 @@ export default {
   }
 }
 
-
 </style>
-
-
