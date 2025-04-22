@@ -83,7 +83,7 @@ export default {
   text-decoration: none;
   border-radius: 1000px;
   font-weight: 900;
-  padding: 6px 50px 7px 50px;
+  padding: 6px 30px 7px 30px;
   color: var(--front);
   text-align: center;
   font-family: 'Sniglet';
