@@ -232,14 +232,13 @@ function onResize() {
     <InfoSection 
       :palette="palette"
     />
+    <PrizesSection 
+      :palette="palette"
+    />
     <ProjectsSection
-      v-if="false"
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
-    />
-    <PrizesSection 
-      :palette="palette"
     />
     <IdeasSection
       :palette="palette"

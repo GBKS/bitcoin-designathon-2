@@ -36,7 +36,6 @@
         <SuperButton
           link="https://airtable.com/appAR943q3FpYsoDk/pagbjWs9UigJrGJ0c/form"
           label="Sign up"
-          size="small"
           :color="palette.button.background"
           :textColor="palette.button.label"
         />

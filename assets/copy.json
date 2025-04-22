@@ -58,15 +58,15 @@
   },
   "ideas": {
     "title": "Ideas",
-    "description": "It all starts with ideas. In the time leading up to the Designathon, we invite you to submit your ideas. They will serve as inspiration for everyone to form teams and collaborate on during the event. <a href=\"#question-ideas\">Got questions?</a>",
-    "link": "https://airtable.com/appAR943q3FpYsoDk/pagFdLTNpF51aIXmY/form",
-    "linkLabel": "Submit your idea"
+    "description": "It all starts with ideas. In the time leading up to the Designathon, we invited you to submit your ideas. They serve as inspiration for everyone to form teams and collaborate on during the event. <a href=\"#question-ideas\">Got questions?</a>",
+    "link-dead": "https://airtable.com/appAR943q3FpYsoDk/pagFdLTNpF51aIXmY/form",
+    "linkLabel-dead": "Submit your idea"
   },
   "projects": {
     "title": "Projects",
-    "description": "These were the projects being worked on at Designathon, you can see the final presentations in this <a href=\"https://www.youtube.com/watch?v=YIfFbHIdovw\" target=\"_blank\" rel=\"nofollow noindex\">call recording</a>. Some of them chose to continue in <a href=\"https://makers.bolt.fun/tournaments/1/overview\" target=\"_blank\" rel=\"nofollow noindex\">Legends of Lightning</a>.",
-    "link-dead": "https://airtable.com/shrwp1JAoY0oHiTnF",
-    "linkLabel-dead": "Start a project",
+    "description": "Projects are how we organize and collaborate during the designathon. Anyone can form a project with an idea they would like to work on, independently or with others.",
+    "link": "https://airtable.com/appAR943q3FpYsoDk/pagQSTbNza6dVi39z/form",
+    "linkLabel": "Start a project",
     "general": {
       "text": "Have not seen anything yet that interests you? You can also register first and sort out later what to work on. Also check out our <a href=\"https://docs.google.com/document/d/1aoc9Noc9x9N0jj3F1OTWNv6W3wA6v8mXxGNho5XaXR8/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with participation&nbsp;tips.",
       "link": "https://airtable.com/shrKk3LXmnAe1YsGV"

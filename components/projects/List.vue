@@ -1,3 +1,96 @@
+<script setup>
+
+const props = defineProps([
+  'palette',
+  'projects',
+  'ideas',
+  'color'
+])
+
+const activeId = ref(null)
+const paginationIndex = ref(0)
+const perPage = 9
+
+onMounted(() => {
+  // On load, check if deep-linking to a project
+  // If so, show overlay and scroll to projects section
+  // Hash is not available during build, so doing this here
+  if(process.browser) {
+    window.addEventListener('hashchange', checkHash)
+
+    checkHash(true)
+  }
+})
+
+const paginationPages = computed(() => {
+  let result = 0
+
+  if(props.projects && props.projects.length > 0) {
+    result = Math.ceil(props.projects.length / perPage)
+  }
+
+  return result
+})
+
+const filteredProjects = computed(() => {
+  let result = props.projects
+
+  if(paginationPages.value > 1) {
+    const start = paginationIndex.value * perPage
+    result = props.projects.slice(start, start + perPage)
+  }
+
+  return result
+})
+
+function closeOverlay() {
+  if(process.browser) {
+    if(window.location.hash == '#'+activeId.value) {
+      history.pushState(null, null, '');
+    }
+  }
+
+  activeId.value = null
+}
+
+function paginate(page) {
+  paginationIndex.value = page
+}
+
+function checkHash(scrollToSection) {
+  let newActiveId
+
+  // Looks like #project-recd90OXCtbtOaMb5
+  const fullHash = window.location.hash
+
+  if(fullHash && fullHash.indexOf('-') !== -1) {
+    let hash = fullHash.split('-')[1]
+
+    for(let i=0; i<props.projects.length; i++) {
+      if(props.projects[i].id == hash) {
+        newActiveId = hash
+
+        if(scrollToSection) {
+          const projectSection = document.getElementById('projects')
+          const sectionCenter = projectSection.offsetTop + projectSection.offsetHeight/2
+          const delta = Math.abs(sectionCenter - window.pageYOffset)
+
+
+          if(delta > 600) {
+            window.scrollTo(0, projectSection.offsetTop)
+          }
+        }
+
+        break;
+      }
+    }
+  }
+
+  activeId.value = newActiveId
+}
+
+</script>
+
 <template>
   <div class="project-list">
     <Pagination
@@ -27,109 +120,6 @@
     />
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'palette',
-    'projects',
-    'ideas',
-    'color'
-  ],
-
-  data() {
-    return {
-      activeId: null,
-      paginationIndex: 0,
-      perPage: 9
-    }
-  },
-
-  mounted() {
-    // On load, check if deep-linking to a project
-    // If so, show overlay and scroll to projects section
-    // Hash is not available during build, so doing this here
-    if(process.browser) {
-      window.addEventListener('hashchange', this.checkHash.bind(this))
-
-      this.checkHash(true)
-    }
-  },
-
-  computed: {
-    paginationPages() {
-      let result = 0
-
-      if(this.projects && this.projects.length > 0) {
-        result = Math.ceil(this.projects.length / this.perPage)
-      }
-
-      return result
-    },
-
-    filteredProjects() {
-      let result = this.projects
-
-      if(this.paginationPages > 1) {
-        const start = this.paginationIndex * this.perPage
-        result = this.projects.slice(start, start + this.perPage)
-      }
-
-      return result
-    }
-  },
-
-  methods: {
-    closeOverlay() {
-      if(process.browser) {
-        if(window.location.hash == '#'+this.activeId) {
-          history.pushState(null, null, '');
-        }
-      }
-
-      this.activeId = null
-    },
-
-    paginate(page) {
-      this.paginationIndex = page
-    },
-
-    checkHash(scrollToSection) {
-      let newActiveId
-
-      // Looks like #project-recd90OXCtbtOaMb5
-      const fullHash = window.location.hash
-
-      if(fullHash && fullHash.indexOf('-') !== -1) {
-        let hash = fullHash.split('-')[1]
-
-        for(let i=0; i<this.projects.length; i++) {
-          if(this.projects[i].id == hash) {
-            newActiveId = hash
-
-            if(scrollToSection) {
-              const projectSection = document.getElementById('projects')
-              const sectionCenter = projectSection.offsetTop + projectSection.offsetHeight/2
-              const delta = Math.abs(sectionCenter - window.pageYOffset)
-
-
-              if(delta > 600) {
-                window.scrollTo(0, projectSection.offsetTop)
-              }
-            }
-
-            break;
-          }
-        }
-      }
-
-      this.activeId = newActiveId
-    }
-  }
-
-}
-</script>
 
 <style lang="scss" scoped>
 
