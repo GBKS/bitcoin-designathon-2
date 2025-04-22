@@ -80,7 +80,7 @@ function clickBackground(event) {
 }
 
 function keyUp(event) {
-  if(props.project && event.which == 27) {
+  if(props.activeId && event.which == 27) {
     close()
   }
 }
