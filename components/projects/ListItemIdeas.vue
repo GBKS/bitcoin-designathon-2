@@ -1,3 +1,68 @@
+<script setup>
+
+const props = defineProps([
+  'project',
+  'ideas',
+  'align'
+])
+
+const hovering = ref(false)
+
+const classObject = computed(() => {
+  const c = []
+
+  if(props.align) {
+    c.push('-'+props.align)
+  } else {
+    c.push('-left')
+  }
+
+  return c.join(' ')
+})
+
+const title = computed(() => {
+  let result
+
+  if(ideaList.value) {
+    if(ideaList.value.length == 1) {
+      return 'Based on this idea'
+    } else {
+      return 'Based on these ideas'
+    }
+  }
+
+  return result
+})
+
+const ideaList = computed(() => {
+  let result = []
+
+  const projectIdeas = props.project.fields.Idea
+  if(projectIdeas) {
+    let ideaId, idea, i, k
+    for(i=0; i<projectIdeas.length; i++) {
+      ideaId = projectIdeas[i]
+
+      for(k=0; k<props.ideas.length; k++) {
+        idea = props.ideas[k]
+
+        if(idea.id == ideaId) {
+          result.push(idea)
+          break
+        }
+      }
+    }
+  }
+
+  if(result.length == 0) {
+    result = null
+  }
+
+  return result
+})
+
+</script>
+
 <template>
   <div v-if="ideaList" :class="classObject">
     <h5>{{ title }}</h5>
@@ -8,79 +73,6 @@
     >{{ idea.fields.Name }}</a>
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'project',
-    'ideas',
-    'align'
-  ],
-
-  data() {
-    return {
-      hovering: false
-    }
-  },
-
-  computed: {
-    classObject() {
-      const c = []
-
-      if(this.align) {
-        c.push('-'+this.align)
-      } else {
-        c.push('-left')
-      }
-
-      return c.join(' ')
-    },
-
-    title() {
-      let result
-
-      if(this.ideaList) {
-        if(this.ideaList.length == 1) {
-          return 'Based on this idea'
-        } else {
-          return 'Based on these ideas'
-        }
-      }
-
-      return result
-    },
-
-    ideaList() {
-      let result = []
-
-      const projectIdeas = this.project.fields.Idea
-      if(projectIdeas) {
-        let ideaId, idea, i, k
-        for(i=0; i<projectIdeas.length; i++) {
-          ideaId = projectIdeas[i]
-
-          for(k=0; k<this.ideas.length; k++) {
-            idea = this.ideas[k]
-
-            if(idea.id == ideaId) {
-              result.push(idea)
-              break
-            }
-          }
-        }
-      }
-
-      if(result.length == 0) {
-        result = null
-      }
-
-      return result
-    }
-  }
-
-}
-</script>
 
 <style lang="scss" scoped>
 

@@ -1,3 +1,68 @@
+<script setup>
+
+const props = defineProps([
+  'palette',
+  'project',
+  'ideas',
+  'color'
+])
+
+const hovering = ref(false)
+
+const classObject = computed(() => {
+  const c = ['project-list-item']
+
+  if(isWinner.value) {
+    c.push('-winner')
+  }
+
+  return c.join(' ')
+})
+
+const elementId = computed(() => {
+  return 'project-summary-'+props.project.id
+})
+
+const name = computed(() => {
+  return props.project.fields.Name
+})
+
+const description = computed(() => {
+  return props.project.fields.Description
+})
+
+const shortenedDescription = computed(() => {
+  let result = props.project.fields.Description
+
+  if(result.length > 100) {
+    result = result.substr(0, 98) //  <b>more</b>
+
+    const lastIndex = result.lastIndexOf(' ')
+    if(lastIndex > result.length - 10) {
+      result = result.substr(0, lastIndex)
+    }
+
+    result += '...'
+  }
+
+  return result
+})
+
+const isWinner = computed(() => {
+  const prizeField = props.project.fields.Prize
+  return prizeField && prizeField != '' && prizeField.length > 0
+})
+
+function hover() {
+  hovering.value = true
+}
+
+function unhover() {
+  hovering.value = false
+}
+
+</script>
+
 <template>
   <div
     :id="elementId"
@@ -17,7 +82,7 @@
       :color="color"
       :hovering="hovering"
     />
-    <h3><a :href="'#project-'+this.project.id">{{ name }}</a></h3>
+    <h3><a :href="'#project-'+project.id">{{ name }}</a></h3>
     <p v-if="description" v-html="shortenedDescription" />
     <ProjectsListItemIdeas
       :project="project"
@@ -25,7 +90,7 @@
       align="center"
     />
     <SuperButton
-      :link="'#project-'+this.project.id"
+      :link="'#project-'+project.id"
       label="More info"
       size="small"
       :color="color"
@@ -33,81 +98,6 @@
     />
   </div>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'palette',
-    'project',
-    'ideas',
-    'color'
-  ],
-
-  data() {
-    return {
-      hovering: false
-    }
-  },
-
-  computed: {
-    classObject() {
-      const c = ['project-list-item']
-
-      if(this.isWinner) {
-        c.push('-winner')
-      }
-
-      return c.join(' ')
-    },
-
-    elementId() {
-      return 'project-summary-'+this.project.id
-    },
-
-    name() {
-      return this.project.fields.Name
-    },
-
-    description() {
-      return this.project.fields.Description
-    },
-
-    shortenedDescription() {
-      let result = this.project.fields.Description
-
-      if(result.length > 100) {
-        result = result.substr(0, 98) //  <b>more</b>
-
-        const lastIndex = result.lastIndexOf(' ')
-        if(lastIndex > result.length - 10) {
-          result = result.substr(0, lastIndex)
-        }
-
-        result += '...'
-      }
-
-      return result
-    },
-
-    isWinner() {
-      const prizeField = this.project.fields.Prize
-      return prizeField && prizeField != '' && prizeField.length > 0
-    }
-  },
-
-  methods: {
-    hover() {
-      this.hovering = true
-    },
-
-    unhover() {
-      this.hovering = false
-    }
-  }
-
-}
-</script>
 
 <style lang="scss">
 

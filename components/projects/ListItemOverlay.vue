@@ -1,3 +1,92 @@
+<script setup>
+
+const props = defineProps([
+  'activeId',
+  'palette',
+  'projects',
+  'ideas',
+  'color'
+])
+
+const emit = defineEmits(['close'])
+
+const hovering = ref(false)
+let keyCallback = null
+const canvas = ref()
+
+onMounted(() => {
+  if(process.browser) {
+    keyCallback = keyUp
+    window.addEventListener('keyup', keyCallback)
+  }
+})
+
+onBeforeUnmount(() => {
+  if(process.browser) {
+    window.removeEventListener('keyup', keyCallback)
+  }
+})
+
+const project = computed(() => {
+  let result
+
+  for(let i=0; i<props.projects.length; i++) {
+    if(props.projects[i].id == props.activeId) {
+      result = props.projects[i]
+      break
+    }
+  }
+
+  return result
+})
+
+const name = computed(() => {
+  return project.value.fields.Name
+})
+
+const description = computed(() => {
+  return project.value.fields.Description
+})
+
+// const formattedDescription = computed(() => {})
+//   let result = this.$md.render(this.description)
+
+//   result = result.split('<a').join('<a target="_blank" rel="nofollow noindex"')
+
+//   return result
+// })
+
+const joinLink = computed(() => {
+  return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Projects='+project.value.id
+})
+
+function hover() {
+  hovering.value = true
+}
+
+function unhover() {
+  hovering.value = false
+}
+
+function close() {
+  emit('close')
+  history.pushState("", document.title, window.location.pathname);
+}
+
+function clickBackground(event) {
+  if(event.target == canvas.value) {
+    close()
+  }
+}
+
+function keyUp(event) {
+  if(props.activeId && event.which == 27) {
+    close()
+  }
+}
+
+</script>
+
 <template>
   <transition
     v-if="project"
@@ -25,7 +114,7 @@
             :hovering="hovering"
           />
           <h3>{{ name }}</h3>
-          <div class="description" v-html="formattedDescription" />
+          <MDC class="description" :value="description"  />
           <ProjectsListItemIdeas
             :project="project"
             :ideas="ideas"
@@ -43,102 +132,6 @@
     </div>
   </transition>
 </template>
-
-<script>
-export default {
-
-  props: [
-    'activeId',
-    'palette',
-    'projects',
-    'ideas',
-    'color'
-  ],
-
-  data() {
-    return {
-      hovering: false,
-      keyCallback: null
-    }
-  },
-
-  mounted() {
-    if(process.browser) {
-      this.keyCallback = this.keyUp.bind(this)
-      window.addEventListener('keyup', this.keyCallback)
-    }
-  },
-
-  beforeDestroy() {
-    if(process.browser) {
-      window.removeEventListener('keyup', this.keyCallback)
-    }
-  },
-
-  computed: {
-    project() {
-      let result
-
-      for(let i=0; i<this.projects.length; i++) {
-        if(this.projects[i].id == this.activeId) {
-          result = this.projects[i]
-          break
-        }
-      }
-
-      return result
-    },
-
-    name() {
-      return this.project.fields.Name
-    },
-
-    description() {
-      return this.project.fields.Description
-    },
-
-    formattedDescription() {
-      let result = this.$md.render(this.description)
-
-      result = result.split('<a').join('<a target="_blank" rel="nofollow noindex"')
-
-      return result
-    },
-
-    joinLink() {
-      return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Projects='+this.project.id
-    }
-  },
-
-  methods: {
-    hover() {
-      this.hovering = true
-    },
-
-    unhover() {
-      this.hovering = false
-    },
-
-    close() {
-      this.$emit('close')
-      history.pushState("", document.title, window.location.pathname);
-    },
-
-    clickBackground(event) {
-      if(event.target == this.$refs.canvas) {
-        this.close()
-      }
-    },
-
-    keyUp(event) {
-      if(this.project && event.which == 27) {
-        this.close()
-      }
-    }
-  }
-
-}
-</script>
 
 <style lang="scss">
 

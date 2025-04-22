@@ -1,3 +1,77 @@
+<script setup>
+import allCopy from "~/assets/copy.json";
+
+const props = defineProps([
+  'palette',
+  'projects',
+  'ideas'
+])
+
+const copy = allCopy.projects
+const shuffleProjects = ref(false)
+
+onMounted(() => {
+  shuffleProjects.value = true
+})
+
+const cleanProjects = computed(() => {
+  const result = []
+
+  let project
+  for(let i=0; i<props.projects.length; i++) {
+    project = props.projects[i]
+
+    if(project.fields.Name && 
+      project.fields.Name.length > 0 && 
+      project.fields.Description && 
+      project.fields.Description.length > 0 && 
+      project.fields.Status == 'Visible'
+    ) {
+      result.push(project)
+    }
+  }
+
+  if(shuffleProjects.value) {
+    const shuffledResult = shuffle(result)
+    const resultWithWinnersAtFront = moveWinnersToFront(shuffledResult)
+    return resultWithWinnersAtFront
+  } else {
+    return result
+  }
+})
+
+const color = computed(() => {
+  return props.palette[2]
+})
+
+function shuffle(a) {
+  let j, x, i
+  for(i = a.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1))
+    x = a[i]
+    a[i] = a[j]
+    a[j] = x
+  }
+  return a
+}
+
+function moveWinnersToFront(list) {
+  return list.sort(function(a, b) {
+    const aPrize = a.fields.Prize
+    const bPrize = b.fields.Prize
+    if(aPrize && bPrize) {
+      return parseInt(aPrize) < parseInt(bPrize) ? -1 : 1
+    } else if(aPrize) {
+      return -1
+    } else if(bPrize) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+}
+</script>
+
 <template>
   <div id="projects" class="projects-section -section">
     <SectionHeader
@@ -5,10 +79,11 @@
       :description="copy.description"
       :link="copy.link"
       :linkLabel="copy.linkLabel"
-      :color="color"
+      :color="palette.button.background"
+      :textColor="palette.button.label"
     />
     <ProjectsList
-      v-if="projects"
+      v-if="false && projects"
       :projects="cleanProjects"
       :ideas="ideas"
       :palette="palette"
@@ -19,99 +94,13 @@
       <p v-html="copy.general.text" />
       <SuperButton
         :link="copy.general.link"
-        label="Register"
-        size="small"
-        :color="color"
+        label="Add a project"
+        :color="palette.button.background"
+        :textColor="palette.button.label"
       />
     </div>
   </div>
 </template>
-
-<script>
-import copy from "~/assets/copy.json";
-
-export default {
-
-  props: [
-    'palette',
-    'projects',
-    'ideas'
-  ],
-
-  data() {
-    return {
-      copy: copy.projects,
-      shuffleProjects: false
-    }
-  },
-
-  mounted() {
-    this.shuffleProjects = true
-  },
-
-  computed: {
-    cleanProjects() {
-      const result = []
-
-      let project
-      for(let i=0; i<this.projects.length; i++) {
-        project = this.projects[i]
-
-        if(project.fields.Name && 
-          project.fields.Name.length > 0 && 
-          project.fields.Description && 
-          project.fields.Description.length > 0 && 
-          project.fields.Status == 'Visible'
-        ) {
-          result.push(project)
-        }
-      }
-
-      if(this.shuffleProjects) {
-        const shuffledResult = this.shuffle(result)
-        const resultWithWinnersAtFront = this.moveWinnersToFront(shuffledResult)
-        return resultWithWinnersAtFront
-      } else {
-        return result
-      }
-    },
-
-    color() {
-      return this.palette[2]
-    }
-  },
-
-  methods: {
-    shuffle(a) {
-      let j, x, i
-      for(i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1))
-        x = a[i]
-        a[i] = a[j]
-        a[j] = x
-      }
-      return a
-    },
-
-    moveWinnersToFront(list) {
-      return list.sort(function(a, b) {
-        const aPrize = a.fields.Prize
-        const bPrize = b.fields.Prize
-        if(aPrize && bPrize) {
-          return parseInt(aPrize) < parseInt(bPrize) ? -1 : 1
-        } else if(aPrize) {
-          return -1
-        } else if(bPrize) {
-          return 1
-        } else {
-          return 0
-        }
-      })
-    }
-  }
-
-}
-</script>
 
 <style lang="scss">
 
@@ -133,6 +122,8 @@ export default {
     }
 
     .super-button {
+      padding-left: 25px;
+      padding-right: 25px;
       flex-shrink: 1;
     }
   }
