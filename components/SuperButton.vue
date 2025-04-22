@@ -90,7 +90,7 @@ export default {
   font-weight: 900;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  @include mixins.r('font-size', 17, 35);
+  @include mixins.r('font-size', 27, 35);
 
   svg {
     width: 25px;
@@ -127,12 +127,12 @@ export default {
   }
 
   &.-invert {
-    border-color: black;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     color: var(--front);
     background-color: var(--back);
 
     &:before {
-      border-color: rgba(black, 0.2);
+      border-color: rgba(black, 0.5);
     }
   }
 

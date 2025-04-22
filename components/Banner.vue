@@ -40,10 +40,8 @@
           :textColor="palette.button.label"
         />
         <SuperIconButton
-          v-if="false"
-          link="nostr:npub13s5mxgws70rpxsug96jfvglggackjrxs2ehypwg0prjaxsek42sqd9l03e"
+          link="https://primal.net/p/nprofile1qqsgc2dny8g083sngwyzafyky05ywutfpng9vmjqhy8s3ewngvm24gq5awu77"
           icon="nostr"
-          size="small"
           :color="palette.button.background"
           :textColor="palette.button.label"
         />
@@ -260,7 +258,7 @@ export default {
 
     .options {
       display: flex;
-      gap: 30px;
+      gap: 20px;
       transition: all 1000ms animations.$easeOutCubic;
       transition-delay: 2200ms;
       transform: translateY(100px);
