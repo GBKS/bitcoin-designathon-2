@@ -57,7 +57,7 @@ const description = computed(() => {
 // })
 
 const joinLink = computed(() => {
-  return 'https://airtable.com/shrKk3LXmnAe1YsGV?prefill_Projects='+project.value.id
+  return 'https://airtable.com/appAR943q3FpYsoDk/pagbjWs9UigJrGJ0c/form?prefill_Projects='+project.value.id
 })
 
 function hover() {
@@ -120,7 +120,6 @@ function keyUp(event) {
             :ideas="ideas"
           />
           <SuperButton
-            v-if="false"
             :link="joinLink"
             label="Join project"
             :color="color"
