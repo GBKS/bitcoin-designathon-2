@@ -83,7 +83,7 @@ function moveWinnersToFront(list) {
       :textColor="palette.button.label"
     />
     <ProjectsList
-      v-if="false && projects"
+      v-if="projects"
       :projects="cleanProjects"
       :ideas="ideas"
       :palette="palette"
