@@ -162,17 +162,18 @@
         "sponsor": {
           "image": "bitcoin-design",
           "name": "Bitcoin Design Foundation",
-          "url": "http://bitcoindesignfoundation.org"
+          "url": "https://bitcoindesignfoundation.org"
         }
       },
       {
         "title": "Accessibility",
         "description": "Best effort at improving accessibility of an open-source bitcoin project.",
         "image": "accessibility",
-        "prize": "Prize: TBD",
+        "prize": "Prize: $500 in ₿",
         "sponsor": {
-          "image": "looking",
-          "name": "Looking for a sponsor"
+          "image": "planb",
+          "name": "Plan₿ network",
+          "url": "https://planb.network"
         }
       },
       {
@@ -189,7 +190,7 @@
         "sponsor": {
           "image": "opencash",
           "name": "Gandlaf and OpenCash",
-          "url": "http://opencash.dev"
+          "url": "https://opencash.dev"
         }
       }
     ]
