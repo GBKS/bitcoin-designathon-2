@@ -158,23 +158,81 @@
         "title": "Best Overall",
         "description": "The first prize for the best overall effort and outcome.",
         "image": "overall",
-        "prize": "Prize: 5,000,000 sats",
-        "sponsor": {
-          "image": "bitcoin-design",
-          "name": "Bitcoin Design Foundation",
-          "url": "https://bitcoindesignfoundation.org"
-        }
+        "prize": "Prize: 3,000,000 sats",
+        "sponsors": [
+          {
+            "image": "bitcoin-design",
+            "name": "Bitcoin Design Foundation",
+            "url": "https://bitcoindesignfoundation.org"
+          }
+        ]
+      },
+      {
+        "title": "2nd place",
+        "description": "The prize for the second best overall effort and outcome.",
+        "image": "second",
+        "prize": "Prize: 1,500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a>",
+        "sponsors": [
+          {
+            "image": "bitcoin-design",
+            "name": "Bitcoin Design Foundation",
+            "url": "https://bitcoindesignfoundation.org"
+          },
+          {
+            "image": "blockstream",
+            "name": "Blockstream",
+            "url": "https://blockstream.com"
+          }
+        ]
+      },
+      {
+        "title": "3rd place",
+        "description": "The prize for the third best overall effort and outcome.",
+        "image": "third",
+        "prize": "Prize: 500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a>",
+        "sponsors": [
+          {
+            "image": "bitcoin-design",
+            "name": "Bitcoin Design Foundation",
+            "url": "https://bitcoindesignfoundation.org"
+          },
+          {
+            "image": "blockstream",
+            "name": "Blockstream",
+            "url": "https://blockstream.com"
+          }
+        ]
+      },
+      {
+        "title": "4-6th place",
+        "description": "Prize for the fourth, fifth, and sixth best overall effort and outcome.",
+        "image": "fourtosix",
+        "prize": "<a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a>",
+        "sponsors": [
+          {
+            "image": "bitcoin-design",
+            "name": "Bitcoin Design Foundation",
+            "url": "https://bitcoindesignfoundation.org"
+          },
+          {
+            "image": "blockstream",
+            "name": "Blockstream",
+            "url": "https://blockstream.com"
+          }
+        ]
       },
       {
         "title": "Accessibility",
         "description": "Best effort at improving accessibility of an open-source bitcoin project.",
         "image": "accessibility",
         "prize": "Prize: $500 in ₿",
-        "sponsor": {
-          "image": "planb",
-          "name": "Plan₿ network",
-          "url": "https://planb.network"
-        }
+        "sponsors": [
+          {
+            "image": "planb",
+            "name": "Plan₿ network",
+            "url": "https://planb.network"
+          }
+        ]
       },
       {
         "title": "Open Design",
@@ -187,11 +245,13 @@
         "description": "Best design for Ecash paper note templates.",
         "image": "ecash-notes",
         "prize": "Prize: 300,000 sats",
-        "sponsor": {
-          "image": "opencash",
-          "name": "Gandlaf and OpenCash",
-          "url": "https://opencash.dev"
-        }
+        "sponsors": [
+          {
+            "image": "opencash",
+            "name": "Gandlaf and OpenCash",
+            "url": "https://opencash.dev"
+          }
+        ]
       }
     ]
   }
