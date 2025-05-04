@@ -158,12 +158,17 @@
         "title": "Best Overall",
         "description": "The first prize for the best overall effort and outcome.",
         "image": "overall",
-        "prize": "Prize: 3,000,000 sats",
+        "prize": "Prize: 3,000,000 sats + <a href=\"https://herecomesbitcoin.store/p/sweatshirts/\" target=\"_blank\">Here Comes Bitcoin Sweatshirt</a>",
         "sponsors": [
           {
             "image": "bitcoin-design",
             "name": "Bitcoin Design Foundation",
             "url": "https://bitcoindesignfoundation.org"
+          },
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
           }
         ]
       },
@@ -171,7 +176,7 @@
         "title": "2nd place",
         "description": "The prize for the second best overall effort and outcome.",
         "image": "second",
-        "prize": "Prize: 1,500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a>",
+        "prize": "Prize: 1,500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a> + <a href=\"https://herecomesbitcoin.store/p/t-shirts/\" target=\"_blank\">Here Comes Bitcoin T-shirt</a>",
         "sponsors": [
           {
             "image": "bitcoin-design",
@@ -182,6 +187,11 @@
             "image": "blockstream",
             "name": "Blockstream",
             "url": "https://blockstream.com"
+          },
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
           }
         ]
       },
@@ -189,7 +199,7 @@
         "title": "3rd place",
         "description": "The prize for the third best overall effort and outcome.",
         "image": "third",
-        "prize": "Prize: 500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a>",
+        "prize": "Prize: 500,000 sats + <a href=\"https://blockstream.com/jade/\" target=\"_blank\">2 Jade hardware wallets</a> + <a href=\"https://herecomesbitcoin.store/p/tees/\" target=\"_blank\">Here Comes Bitcoin Women's Tee</a>",
         "sponsors": [
           {
             "image": "bitcoin-design",
@@ -200,6 +210,11 @@
             "image": "blockstream",
             "name": "Blockstream",
             "url": "https://blockstream.com"
+          },
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
           }
         ]
       },
@@ -225,12 +240,17 @@
         "title": "Accessibility",
         "description": "Best effort at improving accessibility of an open-source bitcoin project.",
         "image": "accessibility",
-        "prize": "Prize: $500 in ₿",
+        "prize": "Prize: $500 in ₿ + <a href=\"https://herecomesbitcoin.store/p/pillows/\" target=\"_blank\">Here Comes Bitcoin Pillow</a>",
         "sponsors": [
           {
             "image": "planb",
             "name": "Plan₿ network",
             "url": "https://planb.network"
+          },
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
           }
         ]
       },
@@ -238,18 +258,30 @@
         "title": "Open Design",
         "description": "Best use of open-source design tools and working in public.",
         "image": "open-design",
-        "prize": "Prize: Penpot swag"
+        "prize": "Prize: Penpot swag + <a href=\"https://herecomesbitcoin.store/p/bags/\" target=\"_blank\">Here Comes Bitcoin Tote Bag</a>",
+        "sponsors": [
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
+          }
+        ]
       },
       {
         "title": "Ecash notes",
         "description": "Best design for Ecash paper note templates.",
         "image": "ecash-notes",
-        "prize": "Prize: 300,000 sats",
+        "prize": "Prize: 300,000 sats + <a href=\"https://herecomesbitcoin.store/p/toys/\" target=\"_blank\">Here Comes Bitcoin Toy</a>",
         "sponsors": [
           {
             "image": "opencash",
             "name": "Gandlaf and OpenCash",
             "url": "https://opencash.dev"
+          },
+          {
+            "image": "herecomesbitcoin",
+            "name": "Here Comes Bitcoin Store",
+            "url": "https://herecomesbitcoin.store/"
           }
         ]
       }
