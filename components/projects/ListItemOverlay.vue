@@ -200,6 +200,13 @@ function keyUp(event) {
             word-break: break-word;
           }
         }
+
+        ol,
+        ul {
+          li {
+            @include mixins.r('font-size', 16, 21);
+          }
+        }
       }
 
       > a {
