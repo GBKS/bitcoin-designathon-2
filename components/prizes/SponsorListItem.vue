@@ -99,6 +99,14 @@ const sponsorSourceSet = computed(() => {
         margin-top: 15px;
         @include mixins.r('font-size', 15, 17);
       }
+
+      a {
+        color: black;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
     }
 
     .sponsors {
