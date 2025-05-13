@@ -31,7 +31,7 @@
             :projects="projects"
           />
           <SuperButton
-            v-if="!false"
+            v-if="false"
             :link="createLink"
             label="Create project"
             :color="color"

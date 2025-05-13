@@ -65,8 +65,8 @@
   "projects": {
     "title": "Projects",
     "description": "Projects are how we organize and collaborate during the designathon. Anyone can form a project with an idea they would like to work on, independently or with others. <a href=\"https://docs.google.com/document/d/1aoc9Noc9x9N0jj3F1OTWNv6W3wA6v8mXxGNho5XaXR8/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">More info here</a>.",
-    "link": "https://airtable.com/appAR943q3FpYsoDk/pagQSTbNza6dVi39z/form",
-    "linkLabel": "Start a project",
+    "link-dead": "https://airtable.com/appAR943q3FpYsoDk/pagQSTbNza6dVi39z/form",
+    "linkLabel-dead": "Start a project",
     "general": {
       "text": "Have not seen anything yet that interests you? You can also register first and sort out later what to work on. Also check out our <a href=\"https://docs.google.com/document/d/1aoc9Noc9x9N0jj3F1OTWNv6W3wA6v8mXxGNho5XaXR8/edit?usp=sharing\" target=\"_blank\" rel=\"nofollow noindex\">how-to document</a> with participation&nbsp;tips.",
       "link": "https://airtable.com/shrKk3LXmnAe1YsGV"
@@ -155,7 +155,7 @@
   },
   "prizes": {
     "title": "Prizes",
-    "description": "Major thanks to our amazing sponsors for making these prizes possible. To learn more about how they will be awarded, see the <a href=\"#questions\">FAQ</a> below. <a href=\"https://docs.google.com/document/d/1PMUzv_xmAwKp7AHHtGrsoKUAb84PtQvjKw_O33wkbnE/edit?usp=sharing\" target=\"_blank\">Interested in sponsoring?</a>",
+    "description": "Major thanks to our amazing sponsors for making these prizes possible. To learn more about how they will be awarded, see the <a href=\"#questions\">FAQ</a> below.",
     "sponsors": [
       {
         "title": "Best Overall",
