@@ -1,76 +1,101 @@
 <template>
   <div :class="classObject">
-    <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 31V2C21 1.44772 20.5523 1 20 1H2.48711C1.66545 1 1.19443 1.93598 1.68402 2.59585L11.5579 15.9042C11.8205 16.258 11.8205 16.742 11.5579 17.0958L1.68402 30.4042C1.19443 31.064 1.66545 32 2.48711 32H20C20.5523 32 21 31.5523 21 31Z" :fill="color" stroke="black" stroke-linejoin="round" :style="styleObject" />
-    </svg>
-    <p>{{ label }}</p>
-    <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 31V2C1 1.44772 1.44772 1 2 1H19.5129C20.3345 1 20.8056 1.93598 20.316 2.59585L10.4421 15.9042C10.1795 16.258 10.1795 16.742 10.4421 17.0958L20.316 30.4042C20.8056 31.064 20.3345 32 19.5129 32H2C1.44772 32 1 31.5523 1 31Z" :fill="color" stroke="black" stroke-linejoin="round" :style="styleObject" />
-    </svg>
+    <div class="wrap">
+      <p v-html="label" />
+      <div
+        v-for="(dot, index) in dots"
+        :key="index"
+        class="dot"
+        :style="dot.style"
+      />
+    </div>
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { computed } from 'vue'
 
-  props: [
-    'project',
-    'palette',
-    'color',
-    'hovering'
-  ],
+const props = defineProps({
+  project: { type: Object, required: true },
+  palette: { type: Object, required: false },
+  color: { type: String, required: false },
+  hovering: { type: Boolean, required: false },
+  prizeCases: { type: Object, required: true }
+})
 
-  computed: {
-    classObject() {
-      const c = ['project-list-item-prize-ribbon']
+const dots = ref([])
 
-      if(this.hovering) {
-        c.push('-hover')
+const createDots = () => {
+  let dot, side, left, top, size
+  while(dots.value.length < 5) {
+    side = Math.floor(Math.random() * 4) + 1
+
+    switch(side) {
+      case 1: // Top
+        left = Math.floor(Math.random() * 80) + 10
+        top = Math.floor(Math.random() * 20) - 15
+        break
+      case 2: // Bottom
+        left = Math.floor(Math.random() * 80) + 10
+        top = Math.floor(Math.random() * 20) + 95
+        break
+      case 3: // Left
+        left = Math.floor(Math.random() * 6) - 3
+        top = Math.floor(Math.random() * 90) + 5
+        break
+      case 4: // Right
+        left = Math.floor(Math.random() * 6) + 97
+        top = Math.floor(Math.random() * 90) + 5
+        break
+    }
+
+    size = Math.floor(Math.random() * 15) + 6
+
+    dot = {
+      style: {
+        left: `${left}%`,
+        top: `${top}%`,
+        width: `${size}px`,
+        height: `${size}px`
       }
+    }
+    dots.value.push(dot)
+  }
+}
 
-      return c.join(' ')
-    },
+createDots()
 
-    label() {
-      let result
+const classObject = computed(() => {
+  const c = ['project-list-item-prize-ribbon']
+  if (props.hovering) {
+    c.push('-hover')
+  }
+  return c.join(' ')
+})
 
-      switch(this.project.fields.Prize) {
-        case '1':
-          result = '1st Prize';
-          break;
-        case '2':
-          result = '2nd Prize';
-          break;
-        case '3':
-          result = '3rd Prize';
-          break;
-        case '4':
-          result = '4th Prize';
-          break;
-        case '5':
-          result = '5th Prize';
-          break;
+const label = computed(() => {
+  const bits = []
+  const prizeBits = props.project?.fields?.Prize?.split(',')
+  if (prizeBits) {
+    for (const bit of prizeBits) {
+      if (props.prizeCases[bit]) {
+        bits.push(props.prizeCases[bit])
       }
-
-      return result
-    },
-
-    styleObject() {
-      const s = {}
-
-      if(this.color) {
-        s.fill = this.color
-      }
-
-      return s
     }
   }
+  return bits.join('<br/>')
+})
 
-}
+const styleObject = computed(() => {
+  const s = {}
+  if (props.color) {
+    s.fill = props.color
+  }
+  return s
+})
 </script>
 
 <style lang="scss" scoped>
-
 @use "@/assets/css/animations.scss";
 @use "@/assets/css/mixins.scss";
 
@@ -83,17 +108,55 @@ export default {
   align-items: center;
   justify-content: center;
 
+  .wrap {
+    position: relative;
+
+    .dot {
+      position: absolute;
+      border-radius: 100px;
+      background-color: var(--palette-0);
+      border: 1px solid black;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      animation: pointScale 3s ease-in-out infinite;
+
+      &:nth-of-type(1) {
+        animation-delay: 0.2s;
+        animation-duration: 3.5s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.4s;
+        animation-duration: 3.2s;
+        background-color: var(--palette-1);
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.6s;
+        animation-duration: 3.4s;
+        background-color: var(--palette-2);
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.8s;
+        animation-duration: 3.1s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 1s;
+        animation-duration: 3.3s;
+        background-color: var(--palette-1);
+      }
+    }
+  }
+
   p {
     margin: 0;
-    padding: 0 15px;
-    line-height: 39px;
+    padding: 5px 10px;
     background-color: var(--palette-2);
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 15px;
     transition: all 450ms animations.$ease;
     position: relative;
     font-weight: 600;
-    font-size: 21px;
+    font-size: 17px;
+    line-height: 1.2;
     z-index: 1;
     white-space: nowrap;
   }
@@ -116,6 +179,17 @@ export default {
   }
 }
 
+@keyframes pointScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  100% {
+    transform:translate(-50%, -50%) scale(1);
+  }
+}
 </style>
 
 

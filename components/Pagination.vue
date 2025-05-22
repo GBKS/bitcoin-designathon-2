@@ -4,7 +4,7 @@
       icon="left"
       :disabled="index == 0"
       :color="color"
-      :textColor="textColor"
+      textColor="black"
       size="small"
       @click="left"
     />
@@ -21,7 +21,7 @@
       icon="right"
       :disabled="index >= (pages - 1)"
       :color="color"
-      :textColor="textColor"
+      textColor="black"
       size="small"
       @click="right"
     />
