@@ -144,7 +144,7 @@ onMounted(() => {
 
   updateHighContrast()
 
-  console.log('ideas', ideas)
+  // console.log('ideas', ideas)
   // console.log('projects', projects)
   // console.log('schedule', schedule)
 })
@@ -232,13 +232,13 @@ function onResize() {
     <InfoSection 
       :palette="palette"
     />
-    <PrizesSection 
-      :palette="palette"
-    />
     <ProjectsSection
       :palette="palette"
       :ideas="ideas"
       :projects="projects"
+    />
+    <PrizesSection 
+      :palette="palette"
     />
     <IdeasSection
       :palette="palette"

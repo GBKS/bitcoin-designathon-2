@@ -11,6 +11,22 @@ const activeId = ref(null)
 const paginationIndex = ref(0)
 const perPage = 9
 
+const prizeCases = {
+  '1': '1st Prize',
+  '2': '2nd Prize',
+  '3': '3rd Prize',
+  '4': '4th Prize',
+  '5': '5th Prize',
+  '6': '6th Prize',
+  'ecash': 'Ecash Notes Prize',
+  'ecash-1': 'Ecash Notes 1st Prize',
+  'ecash-2': 'Ecash Notes 2nd Prize',
+  'ecash-3': 'Ecash Notes 3rd Prize',
+  'ecash-c': 'Ecash Notes Crowd Fave',
+  'accessibility': 'Accessibility Price',
+  'open-design': 'Open Design Price'
+}
+
 onMounted(() => {
   // On load, check if deep-linking to a project
   // If so, show overlay and scroll to projects section
@@ -35,9 +51,23 @@ const paginationPages = computed(() => {
 const filteredProjects = computed(() => {
   let result = props.projects
 
+  const prizeCaseKeys = Object.keys(prizeCases)
+
+  // Sort by prize
+  result = result.sort((a, b) => {
+    const aPrize = a.fields.Prize ? a.fields.Prize.split(',')[0] : null
+    const bPrize = b.fields.Prize ? b.fields.Prize.split(',')[0] : null
+    
+    const aPrizeIndex = aPrize ? prizeCaseKeys.indexOf(aPrize) : 100
+    const bPrizeIndex = bPrize ? prizeCaseKeys.indexOf(bPrize) : 100
+
+    return aPrizeIndex - bPrizeIndex
+  })
+
+  // Filter by pagination
   if(paginationPages.value > 1) {
     const start = paginationIndex.value * perPage
-    result = props.projects.slice(start, start + perPage)
+    result = result.slice(start, start + perPage)
   }
 
   return result
@@ -101,14 +131,17 @@ function checkHash(scrollToSection) {
       @paginate="paginate"
     />
     <div class="wrap">
-      <ProjectsListItem
-        v-for="item in filteredProjects"
-        :key="item.id"
-        :palette="palette"
-        :project="item"
-        :ideas="ideas"
-        :color="color"
-      />
+      <client-only>
+        <ProjectsListItem
+          v-for="item in filteredProjects"
+          :key="item.id"
+          :palette="palette"
+          :project="item"
+          :ideas="ideas"
+          :color="color"
+          :prizeCases="prizeCases"
+        />
+      </client-only>
     </div>
     <ProjectsListItemOverlay
       :activeId="activeId"

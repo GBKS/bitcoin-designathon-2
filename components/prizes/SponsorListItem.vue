@@ -42,7 +42,7 @@ const sponsorSourceSet = computed(() => {
       <p class="-prize" v-html="info.prize" />
       <div class="sponsors" v-if="info.sponsors">
         <PrizesSponsorDetails
-          v-for="sponsor in info.sponsors"
+          v-for="(sponsor, index) in info.sponsors"
           :key="index"
           :info="sponsor"
         />

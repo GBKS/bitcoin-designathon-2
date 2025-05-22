@@ -4,7 +4,8 @@ const props = defineProps([
   'palette',
   'project',
   'ideas',
-  'color'
+  'color',
+  'prizeCases'
 ])
 
 const hovering = ref(false)
@@ -81,6 +82,7 @@ function unhover() {
       :palette="palette"
       :color="color"
       :hovering="hovering"
+      :prizeCases="prizeCases"
     />
     <h3><a :href="'#project-'+project.id">{{ name }}</a></h3>
     <p v-if="description" v-html="shortenedDescription" />
